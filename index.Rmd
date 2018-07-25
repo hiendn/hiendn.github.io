@@ -76,6 +76,8 @@ Email: h.nguyen5@latrobe.edu.au
 
 1. **H.D. Nguyen** and G.J. McLachlan (2018), Some theoretical results regarding the polygonal distribution, *Communications in Statistics: Theory and Methods*, to appear
 
+1. **H.D. Nguyen**, D.H. Wang, and G.J. McLachlan (2018), Randomized mixture models for probability density approximation and estimation, *Information Sciences*, to appear
+
 1. J. Bagnall, A.T. Jones, and **H. Nguyen** (2018), Analysing the voting patterns of the Senate of the 45th Australian Parliament via fully-visible Boltzmann machines, poster presented at *UseR! 2018*
 
 1. A.T. Jones and **H.D. Nguyen** (2018), BoltzMM: Boltzmann Machines with MM Algorithms, *The Comprehensive R Archive Network*, URL: [https://CRAN.R-project.org/package=BoltzMM][BoltzMM]

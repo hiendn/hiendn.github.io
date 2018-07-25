@@ -65,6 +65,8 @@ Email: h.nguyen5@latrobe.edu.au
 
 [Twitter][Twitterpage]
 
+[La Trobe University][LaTrobeLink]
+
 ---
 
 
@@ -199,6 +201,7 @@ Model-Based Methods for Clustering of Spatial Time Series Data. [University of W
 Whole-volume clustering of a calcium imaged zebrafish brains via model-based functional data analysis. [La Trobe University, 11 April 2016][LaTrU110416]
 
 ---
+
 [14]: https://www.dropbox.com/s/fxwjzqi46y8nawv/Hien%20Nguyen%20Resume.pdf?raw=1
 [15]: https://scholar.google.com/citations?user=CXr0aV8AAAAJ&hl=en
 [16]: https://au.linkedin.com/pub/hien-nguyen/59/a81/a69
@@ -229,3 +232,4 @@ Whole-volume clustering of a calcium imaged zebrafish brains via model-based fun
 [20180621S4D2]: https://www.dropbox.com/s/mq4586246erxmtj/Slides.pdf?dl=1
 [Twitterpage]: https://twitter.com/TresBienHien
 [20180713LaTrobe]: https://www.dropbox.com/s/ys32zj87m2l8ew7/Slides.pptx?dl=1
+[LaTrobeLink]: https://scholars.latrobe.edu.au/display/hnguyen

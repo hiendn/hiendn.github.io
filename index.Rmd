@@ -90,7 +90,7 @@ Email: h.nguyen5@latrobe.edu.au
 
 1. **H.D. Nguyen** and F. Chamroukhi (2018), An Introduction to the Practical and Theoretical Aspects of Mixture-of-Experts Modeling, *WIREs Data Mining and Knowledge Discovery*, e1246
 
-1.	**H. D. Nguyen** and A. T. Jones (2018), Big data-appropriate clustering via stochastic approximation and Gaussian mixture models, *Data Analytics: Concepts, Techniques and Applications*, CRC Press
+1.	**H. D. Nguyen** and A. T. Jones (2018), Big data-appropriate clustering via stochastic approximation and Gaussian mixture models, *Data Analytics: Concepts, Techniques, and Applications*, CRC Press
 
 1. **H. D. Nguyen**, A. T. Jones, and G. J. McLachlan (2018), logKDE: Computing Log-Transformed Kernel Density Estimates for Positive Data, *The Comprehensive R Archive Network*, URL: [https://CRAN.R-project.org/package=logKDE][logFDR]
 

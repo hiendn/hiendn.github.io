@@ -82,7 +82,9 @@ Email: h.nguyen5@latrobe.edu.au
 
 1. J. Bagnall, A.T. Jones, and **H. Nguyen** (2018), Analysing the voting patterns of the Senate of the 45th Australian Parliament via fully-visible Boltzmann machines, poster presented at *UseR! 2018*
 
-1. A.T. Jones and **H.D. Nguyen** (2018), BoltzMM: Boltzmann Machines with MM Algorithms, *The Comprehensive R Archive Network*, URL: [https://CRAN.R-project.org/package=BoltzMM][BoltzMM]
+1. A.T. Jones and **H.D. Nguyen**, BoltzMM: Boltzmann Machines with MM Algorithms, *The Comprehensive R Archive Network*, URL: [https://CRAN.R-project.org/package=BoltzMM][BoltzMM]
+
+1. A.T. Jones, **H.D. Nguyen**, and G.J. McLachlan (2018), logKDE: log-transformed kernel density estimation, *Journal of Open Source Software*, vol. 3, 870, URL: [https://doi.org/10.21105/joss.00870][logKDE_JOSS]
 
 1.	L.R. Lloyd-Jones, **H.D. Nguyen**, and G.J. McLachlan (2018), A globally convergent algorithm for lasso-penalized mixture of linear regression models, *Computational Statistics and Data Analysis*, vol. 119, pp. 19-38
 
@@ -90,9 +92,10 @@ Email: h.nguyen5@latrobe.edu.au
 
 1. **H.D. Nguyen** and F. Chamroukhi (2018), An Introduction to the Practical and Theoretical Aspects of Mixture-of-Experts Modeling, *WIREs Data Mining and Knowledge Discovery*, e1246
 
-1.	**H. D. Nguyen** and A. T. Jones (2018), Big data-appropriate clustering via stochastic approximation and Gaussian mixture models, *Data Analytics: Concepts, Techniques, and Applications*, CRC Press
+1.	**H. D. Nguyen** and A.T. Jones (2018), Big data-appropriate clustering via stochastic approximation and Gaussian mixture models, *Data Analytics: Concepts, Techniques, and Applications*, CRC Press
 
-1. **H. D. Nguyen**, A. T. Jones, and G. J. McLachlan (2018), logKDE: Computing Log-Transformed Kernel Density Estimates for Positive Data, *The Comprehensive R Archive Network*, URL: [https://CRAN.R-project.org/package=logKDE][logFDR]
+
+1. **H. D. Nguyen**, A.T. Jones, and G.J. McLachlan (2018), logKDE: Computing Log-Transformed Kernel Density Estimates for Positive Data, *The Comprehensive R Archive Network*, URL: [https://CRAN.R-project.org/package=logKDE][logKDE]
 
 1.	**H.D. Nguyen** and G.J. McLachlan (2018), Chunked-and-averaged estimators for vector parameters, *Statistics and Probability Letters*, vol. 137, pp. 336-342
 
@@ -227,9 +230,10 @@ Whole-volume clustering of a calcium imaged zebrafish brains via model-based fun
 [20171213CRIUGM]: https://www.dropbox.com/s/30u1hjlgn23etux/Slides.pdf?dl=1
 [20171217ERCIM]: https://www.dropbox.com/s/oxctz6iza40c2de/Slides.pdf?dl=1
 [BoltzMM]: https://cran.r-project.org/web/packages/BoltzMM/index.html
-[logFDR]: https://cran.r-project.org/web/packages/logKDE/index.html
+[logKDE]: https://cran.r-project.org/web/packages/logKDE/index.html
 [20180621S4D1]: https://www.dropbox.com/s/1siclt7xawsa76l/Slides.pdf?dl=1
 [20180621S4D2]: https://www.dropbox.com/s/mq4586246erxmtj/Slides.pdf?dl=1
 [Twitterpage]: https://twitter.com/TresBienHien
 [20180713LaTrobe]: https://www.dropbox.com/s/ys32zj87m2l8ew7/Slides.pptx?dl=1
 [LaTrobeLink]: https://scholars.latrobe.edu.au/display/hnguyen
+[logKDE_JOSS]: https://doi.org/10.21105/joss.00870

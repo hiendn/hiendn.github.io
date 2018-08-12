@@ -10,7 +10,7 @@ date: "`r format(Sys.time(), '%d %B, %Y')`"
 
 ---
 
-## Contact Details
+# Contact Details {.tabset}
 
 Dr. Hien D. Nguyen
 
@@ -50,25 +50,6 @@ Email: h.nguyen5@latrobe.edu.au
 * This project provides a novel approach to the clustering of multivariate samples on entities in a class that automatically matches the sample clusters across the entities, allowing for inter-sample variation between the samples in a class. The project aims to develop a widely applicable, mixture-model-based framework for the simultaneous clustering of multivariate samples with inter-sample variation in a class and for the matching of the clusters across the entities in the class. The project will use a statistical approach to automatically match the clusters, since the overall mixture model provides a template for the class. It will provide a basis for discriminating between different classes in addition to the identification of atypical data points within a sample and of anomalous samples within a class. Key applications include biological image analysis and the analysis of data in flow cytometry which is one of the fundamental research tools for the life scientist.
 
 ---
-
-## Curriculum Vitae
-
-[Click to Download][14]
-
----
-
-## Personal Links
-
-[Google Scholar][15]
-
-[LinkedIn][16]
-
-[Twitter][Twitterpage]
-
-[La Trobe University][LaTrobeLink]
-
----
-
 
 ## Publications
 
@@ -202,6 +183,24 @@ A novel approach to clustering time series data in large spatial arrays. [Centre
 Model-Based Methods for Clustering of Spatial Time Series Data. [University of Western Australia, 23-24 June 2016][UWA_Workshop_20160623]
 
 Whole-volume clustering of a calcium imaged zebrafish brains via model-based functional data analysis. [La Trobe University, 11 April 2016][LaTrU110416]
+
+---
+
+## Curriculum Vitae
+
+[Click to Download][14]
+
+---
+
+## Personal Links
+
+[Google Scholar][15]
+
+[LinkedIn][16]
+
+[Twitter][Twitterpage]
+
+[La Trobe University][LaTrobeLink]
 
 ---
 

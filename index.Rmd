@@ -12,7 +12,7 @@ date: "`r format(Sys.time(), '%d %B, %Y')`"
 
 # Contact Details {.tabset}
 
-Dr. Hien D. Nguyen
+Dr. Hien Duy Nguyen
 
 ARC DECRA Research Fellow and Lecturer
 
@@ -25,6 +25,8 @@ La Trobe University
 Melbourne, Victoria, Australia
 
 Email: h.nguyen5@latrobe.edu.au
+
+Curriculum Vitae: [click here to download][14]
 
 --- 
 
@@ -183,12 +185,6 @@ A novel approach to clustering time series data in large spatial arrays. [Centre
 Model-Based Methods for Clustering of Spatial Time Series Data. [University of Western Australia, 23-24 June 2016][UWA_Workshop_20160623]
 
 Whole-volume clustering of a calcium imaged zebrafish brains via model-based functional data analysis. [La Trobe University, 11 April 2016][LaTrU110416]
-
----
-
-## Curriculum Vitae
-
-[Click to Download][14]
 
 ---
 

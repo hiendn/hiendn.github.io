@@ -154,6 +154,8 @@ Curriculum Vitae: [click here to download][14]
 
 ## Presentations and Workshops
 
+The fully-visible Boltzmann machine, maximum pseudolikelihood estimation, and the Senate of the 45th Australian Parliament, [EBS Seminar, Monash University, 17 August 2018][20180817Monash]
+
 A maximum likelihood oddity, [Statistics Seminar, La Trobe University, 13 July 2018][20180713LaTrobe]
 
 MM algorithms for statistical inference and machine learning problems, [S4D, Caen, 21 June 2018][20180621S4D2]
@@ -232,3 +234,4 @@ Whole-volume clustering of a calcium imaged zebrafish brains via model-based fun
 [20180713LaTrobe]: https://www.dropbox.com/s/ys32zj87m2l8ew7/Slides.pptx?dl=1
 [LaTrobeLink]: https://scholars.latrobe.edu.au/display/hnguyen
 [logKDE_JOSS]: https://doi.org/10.21105/joss.00870
+[20180817Monash]: https://www.dropbox.com/s/v51tb3y9o34smzi/Slides.pdf?dl=1

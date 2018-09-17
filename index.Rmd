@@ -153,6 +153,9 @@ Curriculum Vitae: [click here to download][14]
 ---
 
 ## Presentations and Workshops
+
+Minibatch and incremental learning of exponential family mixtures, and the soft k-means clustering problem,[INRIA (MISTIS), Grenoble, 17 September 2018][20180918Grenoble]
+
 On approximations via convolution-defined mixture models, [2nd Italian-French Statistical Seminar, Grenoble, 06 September 2018][20180911Grenoble]
 
 The fully-visible Boltzmann machine, maximum pseudolikelihood estimation, and the Senate of the 45th Australian Parliament, [EBS Seminar, Monash University, 17 August 2018][20180817Monash]
@@ -237,3 +240,4 @@ Whole-volume clustering of a calcium imaged zebrafish brains via model-based fun
 [logKDE_JOSS]: https://doi.org/10.21105/joss.00870
 [20180817Monash]: https://www.dropbox.com/s/v51tb3y9o34smzi/Slides.pdf?dl=1
 [20180911Grenoble]: https://www.dropbox.com/s/8n2dgej19rdaex9/Slides.pdf?dl=1
+[20180918Grenoble]: https://www.dropbox.com/s/prnezou250f69v8/Slides.pdf?dl=1

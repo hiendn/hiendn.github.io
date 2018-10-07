@@ -10,7 +10,7 @@ date: "`r format(Sys.time(), '%d %B, %Y')`"
 
 ---
 
-# Contact Details {.tabset}
+## Contact Details 
 
 Dr. Hien Duy Nguyen
 
@@ -75,10 +75,11 @@ Curriculum Vitae: [click here to download][14]
 
 1. **H.D. Nguyen** and F. Chamroukhi (2018), An Introduction to the Practical and Theoretical Aspects of Mixture-of-Experts Modeling, *WIREs Data Mining and Knowledge Discovery*, e1246
 
-1.	**H. D. Nguyen** and A.T. Jones (2018), Big data-appropriate clustering via stochastic approximation and Gaussian mixture models, *Data Analytics: Concepts, Techniques, and Applications*, CRC Press
+1.	**H.D. Nguyen** and A.T. Jones (2018), Big data-appropriate clustering via stochastic approximation and Gaussian mixture models, *Data Analytics: Concepts, Techniques, and Applications*, CRC Press
 
+1. **H.D. Nguyen**, A.T. Jones, and G.J. McLachlan (2018), Positive data kernel density estimation via the logKDE package for R, in *Proceedings of the Sixteenth Australasian Data Mining Conference*
 
-1. **H. D. Nguyen**, A.T. Jones, and G.J. McLachlan (2018), logKDE: Computing Log-Transformed Kernel Density Estimates for Positive Data, *The Comprehensive R Archive Network*, URL: [https://CRAN.R-project.org/package=logKDE][logKDE]
+1. **H.D. Nguyen**, A.T. Jones, and G.J. McLachlan (2018), logKDE: Computing Log-Transformed Kernel Density Estimates for Positive Data, *The Comprehensive R Archive Network*, URL: [https://CRAN.R-project.org/package=logKDE][logKDE]
 
 1.	**H.D. Nguyen** and G.J. McLachlan (2018), Chunked-and-averaged estimators for vector parameters, *Statistics and Probability Letters*, vol. 137, pp. 336-342
 
@@ -238,6 +239,6 @@ Whole-volume clustering of a calcium imaged zebrafish brains via model-based fun
 [20180713LaTrobe]: https://www.dropbox.com/s/ys32zj87m2l8ew7/Slides.pptx?dl=1
 [LaTrobeLink]: https://scholars.latrobe.edu.au/display/hnguyen
 [logKDE_JOSS]: https://doi.org/10.21105/joss.00870
-[20180817Monash]: https://www.dropbox.com/s/v51tb3y9o34smzi/Slides.pdf?dl=1
+[20180817Monash]: https://www.dropbox.com/s/znir7u6dzbf2tyv/Slides.pdf?dl=1
 [20180911Grenoble]: https://www.dropbox.com/s/8n2dgej19rdaex9/Slides.pdf?dl=1
 [20180918Grenoble]: https://www.dropbox.com/s/prnezou250f69v8/Slides.pdf?dl=1

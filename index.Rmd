@@ -65,7 +65,7 @@ Curriculum Vitae: [click here to download][14]
 
 1. J. Bagnall, A.T. Jones, and **H. Nguyen** (2018), Analysing the voting patterns of the Senate of the 45th Australian Parliament via fully-visible Boltzmann machines, poster presented at *UseR! 2018*
 
-1. A.T. Jones and **H.D. Nguyen**, BoltzMM: Boltzmann Machines with MM Algorithms, *The Comprehensive R Archive Network*, URL: [https://CRAN.R-project.org/package=BoltzMM][BoltzMM]
+1. A.T. Jones and **H.D. Nguyen** (2018), BoltzMM: Boltzmann Machines with MM Algorithms, *The Comprehensive R Archive Network*, URL: [https://CRAN.R-project.org/package=BoltzMM][BoltzMM]
 
 1. A.T. Jones, **H.D. Nguyen**, and G.J. McLachlan (2018), logKDE: log-transformed kernel density estimation, *Journal of Open Source Software*, vol. 3, 870, URL: [https://doi.org/10.21105/joss.00870][logKDE_JOSS]
 

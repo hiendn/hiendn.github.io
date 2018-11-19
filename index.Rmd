@@ -155,6 +155,10 @@ Curriculum Vitae: [click here to download][14]
 
 ## Presentations and Workshops
 
+Optimization Theory for Statistics and Machine Learning, [University of Caen, 15 November--06 December 2018][20181115Caen]
+
+Minibatch and incremental learning of exponential family mixtures, [RMIT, Melbourne, 25 October 2018][20181025RMIT]
+
 Minibatch and incremental learning of exponential family mixtures, and the soft k-means clustering problem,[INRIA (MISTIS), Grenoble, 17 September 2018][20180918Grenoble]
 
 On approximations via convolution-defined mixture models, [2nd Italian-French Statistical Seminar, Grenoble, 06 September 2018][20180911Grenoble]
@@ -189,7 +193,7 @@ Fast model-based clustering of functional data via Gaussian mixture models. [CMS
 
 A novel approach to clustering time series data in large spatial arrays. [Centre for Advanced Imaging, University of Queensland, 23 August 2016][CAI20160823]
 
-Model-Based Methods for Clustering of Spatial Time Series Data. [University of Western Australia, 23-24 June 2016][UWA_Workshop_20160623]
+Model-Based Methods for Clustering of Spatial Time Series Data. [University of Western Australia, 23--24 June 2016][UWA_Workshop_20160623]
 
 Whole-volume clustering of a calcium imaged zebrafish brains via model-based functional data analysis. [La Trobe University, 11 April 2016][LaTrU110416]
 
@@ -242,3 +246,5 @@ Whole-volume clustering of a calcium imaged zebrafish brains via model-based fun
 [20180817Monash]: https://www.dropbox.com/s/znir7u6dzbf2tyv/Slides.pdf?dl=1
 [20180911Grenoble]: https://www.dropbox.com/s/8n2dgej19rdaex9/Slides.pdf?dl=1
 [20180918Grenoble]: https://www.dropbox.com/s/prnezou250f69v8/Slides.pdf?dl=1
+[20181025RMIT]: https://www.dropbox.com/s/x1ykkb06sbrby5k/Slides.pdf?dl=1
+[20181115Caen]: https://github.com/hiendn/CaenOptimization2018

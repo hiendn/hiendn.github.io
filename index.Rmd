@@ -4,6 +4,13 @@ output:
   html_document:
     theme: spacelab
 date: "`r format(Sys.time(), '%d %B, %Y')`"
+bibliography: 
+  - "Untitled_files/pr_articles.bib"
+  - "Untitled_files/pr_inproceedings.bib"
+  - "Untitled_files/pr_bookchapters.bib"
+  - "Untitled_files/OtherPublications.bib"
+csl: "Untitled_files/style.csl"
+nocite: '@*'
 ---
 
 <div align="left">
@@ -32,7 +39,7 @@ Email: h.nguyen5@latrobe.edu.au
 Curriculum vitae: [click here to download](https://github.com/hiendn/CV/raw/master/Master_CV.pdf
 )
 
-**(List of publications, and links to slides and resources can be found within the CV)**
+**(Links to slides and resources can be found within the CV)**
 
 --- 
 
@@ -59,3 +66,14 @@ Curriculum vitae: [click here to download](https://github.com/hiendn/CV/raw/mast
 * This project provides a novel approach to the clustering of multivariate samples on entities in a class that automatically matches the sample clusters across the entities, allowing for inter-sample variation between the samples in a class. The project aims to develop a widely applicable, mixture-model-based framework for the simultaneous clustering of multivariate samples with inter-sample variation in a class and for the matching of the clusters across the entities in the class. The project will use a statistical approach to automatically match the clusters, since the overall mixture model provides a template for the class. It will provide a basis for discriminating between different classes in addition to the identification of atypical data points within a sample and of anomalous samples within a class. Key applications include biological image analysis and the analysis of data in flow cytometry which is one of the fundamental research tools for the life scientist.
 
 ---
+
+## Publications
+
+```{r, echo = FALSE, warning=FALSE}
+dir.create("Untitled_files")
+download.file("https://raw.githubusercontent.com/hiendn/CV/master/pr_articles.bib", "Untitled_files/pr_articles.bib")
+download.file("https://raw.githubusercontent.com/hiendn/CV/master/pr_inproceedings.bib", "Untitled_files/pr_inproceedings.bib")
+download.file("https://raw.githubusercontent.com/citation-style-language/styles/master/apa-cv.csl","Untitled_files/style.csl")
+download.file("https://raw.githubusercontent.com/hiendn/CV/master/pr_bookchapters.bib","Untitled_files/pr_bookchapters.bib")
+download.file("https://raw.githubusercontent.com/hiendn/CV/master/OtherPublications.bib","Untitled_files/OtherPublications.bib")
+```

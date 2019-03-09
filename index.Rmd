@@ -22,9 +22,10 @@ nocite: '@*'
 
 ## Contact Details 
 
+---
+
 Dr. Hien Duy Nguyen
-<div itemscope itemtype="https://schema.org/Person"><a itemprop="sameAs" content="https://orcid.org/0000-0002-9958-432X" href="https://orcid.org/0000-0002-9958-432X" target="orcid.widget" rel="noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">orcid.org/0000-0002-9958-432X</a></div>
-<br>
+
 ARC DECRA Research Fellow and Lecturer
 
 Department of Mathematics and Statistics
@@ -42,10 +43,18 @@ Curriculum vitae: [click here to download](https://github.com/hiendn/CV/raw/mast
 
 **(Links to slides and resources can be found within the CV)**
 
+<div itemscope itemtype="https://schema.org/Person"><a itemprop="sameAs" content="https://orcid.org/0000-0002-9958-432X" href="https://orcid.org/0000-0002-9958-432X" target="orcid.widget" rel="noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">orcid.org/0000-0002-9958-432X</a></div>
+<br>
+<!-- Place this tag in your head or just before your close body tag. -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+<!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/hiendn" data-size="large" data-show-count="true" aria-label="Follow @hiendn on GitHub">Follow \@hiendn</a>
+
 --- 
 
-
 ## Brief Bio
+
+---
 
 **Roles**
 
@@ -53,7 +62,7 @@ Curriculum vitae: [click here to download](https://github.com/hiendn/CV/raw/mast
 * Australian Research Council DECRA Research Fellow (2016--Present).
 * Associate Editor of International Journal of Machine Intelligence and Sensory Signal Processing (2018--Present).
 * Technical Editor of the Australian and New Zealand Journal of Statistics (2018--Present).
-* Handling Editor (Statistical Computation) and Associate Editor of the Australian and New Zealand Journal of Statistics (2019--Present).
+* Handling Editor (Statistical Computing) and Associate Editor of the Australian and New Zealand Journal of Statistics (2019--Present).
 
 **Major Projects**
 
@@ -70,6 +79,8 @@ Curriculum vitae: [click here to download](https://github.com/hiendn/CV/raw/mast
 ---
 
 ## Publications
+
+---
 
 ```{r, echo = FALSE, warning=FALSE}
 dir.create("Untitled_files")

@@ -13,6 +13,17 @@ csl: "Untitled_files/style.csl"
 nocite: '@*'
 ---
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-136356174-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-136356174-2');
+</script>
+
+
 <div align="left">
 <div style="display: inline-flex"> <img src="http://www.latrobe.edu.au/staff-profiles/data/images/photos/hnguyen.jpg" alt="Drawing" style="height: 300px;"/> </div>
 <div style="display: inline-flex"> <a class="twitter-timeline" data-width="300" data-height="300" data-theme="light" data-link-color="#2B7BB9" href="https://twitter.com/TresBienHien?ref_src=twsrc%5Etfw">Tweets by TresBienHien</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </div>

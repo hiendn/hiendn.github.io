@@ -55,6 +55,8 @@ Curriculum vitae: [click here to download](https://github.com/hiendn/CV/raw/mast
 **(Links to slides and resources can be found within the CV)**
 
 <div itemscope itemtype="https://schema.org/Person"><a itemprop="sameAs" content="https://orcid.org/0000-0002-9958-432X" href="https://orcid.org/0000-0002-9958-432X" target="orcid.widget" rel="noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">orcid.org/0000-0002-9958-432X</a></div>
+
+<a href="https://www.researchgate.net/profile/Hien_Nguyen25">Hien Duy Nguyen on ResearchGate</a>
 <br>
 <!-- Place this tag in your head or just before your close body tag. -->
 <script async defer src="https://buttons.github.io/buttons.js"></script>

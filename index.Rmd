@@ -37,7 +37,7 @@ nocite: '@*'
 
 Dr. Hien Duy Nguyen
 
-ARC DECRA Research Fellow and Lecturer
+ARC DECRA Research Fellow and Senior Lecturer
 
 Department of Mathematics and Statistics
 
@@ -70,11 +70,11 @@ Curriculum vitae: [click here to download](https://github.com/hiendn/CV/blob/mas
 
 **Roles**
 
-* Lecturer at La Trobe University in Melbourne, Australia (2016--Present).
 * Australian Research Council DECRA Research Fellow (2016--Present).
 * Associate Editor of International Journal of Machine Intelligence and Sensory Signal Processing (2018--Present).
 * Technical Editor of the Australian and New Zealand Journal of Statistics (2018--Present).
 * Handling Editor (Statistical Computing) and Associate Editor of the Australian and New Zealand Journal of Statistics (2019--Present).
+* Senior Lecturer at La Trobe University in Melbourne, Australia (2019--Present).
 
 **Major Projects**
 

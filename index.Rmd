@@ -70,23 +70,23 @@ Curriculum vitae: [click here to download](https://github.com/hiendn/CV/blob/mas
 
 **Roles**
 
-* Australian Research Council DECRA Research Fellow (2016--Present).
 * Associate Editor of International Journal of Machine Intelligence and Sensory Signal Processing (2018--Present).
 * Technical Editor of the Australian and New Zealand Journal of Statistics (2018--Present).
 * Handling Editor (Statistical Computing) and Associate Editor of the Australian and New Zealand Journal of Statistics (2019--Present).
 * Senior Lecturer at La Trobe University in Melbourne, Australia (2019--Present).
+* Deputy Head of Department at La Trobe University in Melbourne, Australia (2020--Present)
 
 **Major Projects**
-
-*ARC DE170101134: Feasible algorithms for big inference.*
-
-* This project aims to develop algorithms for computationally-intensive statistical tools to analyse Big Data. Big Data is ubiquitous in science, engineering, industry and finance, but needs special machine learning to conduct correct inferential analysis. Computational bottlenecks make many tried-and-true tools of statistical inference inadequate. This project will develop tools including false discovery rate control, heteroscedastic and robust regression and mixture models, via Big Data-appropriate optimisation and composite-likelihood estimation. It will make open, well-documented, and accessible software available for the scalable and distributable analysis of Big Data. The expected outcome is a suite of scalable algorithms to analyse Big Data.
-
-\n
 
 *ARC DP180101192 (with Geoff McLachlan, UQ; and Sharon Lee, UQ): Classification methods for providing personalised and class decisions.*
 
 * This project provides a novel approach to the clustering of multivariate samples on entities in a class that automatically matches the sample clusters across the entities, allowing for inter-sample variation between the samples in a class. The project aims to develop a widely applicable, mixture-model-based framework for the simultaneous clustering of multivariate samples with inter-sample variation in a class and for the matching of the clusters across the entities in the class. The project will use a statistical approach to automatically match the clusters, since the overall mixture model provides a template for the class. It will provide a basis for discriminating between different classes in addition to the identification of atypical data points within a sample and of anomalous samples within a class. Key applications include biological image analysis and the analysis of data in flow cytometry which is one of the fundamental research tools for the life scientist.
+
+**Past Projects**
+
+*ARC DE170101134: Feasible algorithms for big inference.*
+
+* This project aims to develop algorithms for computationally-intensive statistical tools to analyse Big Data. Big Data is ubiquitous in science, engineering, industry and finance, but needs special machine learning to conduct correct inferential analysis. Computational bottlenecks make many tried-and-true tools of statistical inference inadequate. This project will develop tools including false discovery rate control, heteroscedastic and robust regression and mixture models, via Big Data-appropriate optimisation and composite-likelihood estimation. It will make open, well-documented, and accessible software available for the scalable and distributable analysis of Big Data. The expected outcome is a suite of scalable algorithms to analyse Big Data.
 
 ---
 

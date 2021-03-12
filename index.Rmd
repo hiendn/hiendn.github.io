@@ -37,7 +37,7 @@ nocite: '@*'
 
 Dr. Hien Duy Nguyen
 
-ARC DECRA Research Fellow and Senior Lecturer
+Senior Lecturer and Deputy Head of Department
 
 Department of Mathematics and Statistics
 
@@ -70,11 +70,10 @@ Curriculum vitae: [click here to download](https://github.com/hiendn/CV/blob/mas
 
 **Roles**
 
-* Associate Editor of International Journal of Machine Intelligence and Sensory Signal Processing (2018--Present).
-* Technical Editor of the Australian and New Zealand Journal of Statistics (2018--Present).
-* Handling Editor (Statistical Computing) and Associate Editor of the Australian and New Zealand Journal of Statistics (2019--Present).
+* Deputy Head of Department at La Trobe University in Melbourne, Australia (2020--Present).
 * Senior Lecturer at La Trobe University in Melbourne, Australia (2019--Present).
-* Deputy Head of Department at La Trobe University in Melbourne, Australia (2020--Present)
+* Handling Editor (Statistical Computing) and Associate Editor of the Australian and New Zealand Journal of Statistics (2019--Present).
+* Technical Editor of the Australian and New Zealand Journal of Statistics (2018--Present).
 
 **Major Projects**
 

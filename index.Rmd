@@ -37,17 +37,17 @@ nocite: '@*'
 
 Dr. Hien Duy Nguyen
 
-Senior Lecturer and Deputy Head of Department
+Senior Lecturer
 
-Department of Mathematics and Statistics
+School of Mathematics and Physics
 
-Building PS2 - Room 213
+Building 69 -- Room 618
 
-La Trobe University
+University of Queensland
 
-Melbourne, Victoria, Australia
+St. Lucia, Queensland, Australia
 
-Email: h.nguyen5@latrobe.edu.au
+Email: h.nguyen7@uq.edu.au
 
 Curriculum vitae: [click here to download](https://github.com/hiendn/CV/blob/master/Master_CV.pdf)
 
@@ -70,8 +70,8 @@ Curriculum vitae: [click here to download](https://github.com/hiendn/CV/blob/mas
 
 **Roles**
 
-* Deputy Head of Department at La Trobe University in Melbourne, Australia (2020--Present).
-* Senior Lecturer at La Trobe University in Melbourne, Australia (2019--Present).
+* Senior Lecturer at the University of Queensland in Brisbane, Australia (2021--Present)
+* Adjunct Senior Lecturer at La Trobe University in Melbourne, Australia (2021--Present).
 * Handling Editor (Statistical Computing) and Associate Editor of the Australian and New Zealand Journal of Statistics (2019--Present).
 * Technical Editor of the Australian and New Zealand Journal of Statistics (2018--Present).
 

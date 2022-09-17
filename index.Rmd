@@ -25,7 +25,7 @@ nocite: '@*'
 
 
 <div align="left">
-<div style="display: inline-flex"> <img src="http://www.latrobe.edu.au/staff-profiles/data/images/photos/hnguyen.jpg" alt="Drawing" style="height: 300px;"/> </div>
+<div style="display: inline-flex"> <img src="https://smp.uq.edu.au/sites/smp.uq.edu.au/files/styles/uq_core_small_portrait/public/ckfinder/images/staff_profile/12000.jpeg?itok=us0Fls-N" alt="Drawing" style="height: 300px;"/> </div>
 <div style="display: inline-flex"> <a class="twitter-timeline" data-width="300" data-height="300" data-theme="light" data-link-color="#2B7BB9" href="https://twitter.com/TresBienHien?ref_src=twsrc%5Etfw">Tweets by TresBienHien</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </div>
 </div>
 

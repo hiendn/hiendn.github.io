@@ -1,8 +1,12 @@
 ---
 title: "Hien Duy Nguyen, PhD"
 output:
-  html_document:
-    theme: spacelab
+  html_document: 
+    theme: flatly
+    toc: true
+    toc_float:
+      collapsed: false
+      smooth_scroll: true
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 bibliography: 
   - "Untitled_files/pr_articles.bib"
@@ -13,19 +17,21 @@ csl: "Untitled_files/style.csl"
 nocite: '@*'
 ---
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-136356174-2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+:::: {style="display: flex;"}
 
-  gtag('config', 'UA-136356174-2');
-</script>
+::: {}
+<img src="https://smp.uq.edu.au/sites/smp.uq.edu.au/files/styles/uq_core_small_portrait/public/ckfinder/images/staff_profile/12000.jpeg?itok=us0Fls-N" alt="Drawing" style="height: 300px;"/>
+:::
 
+::: {}
+$~~~$
+:::
 
-<div align="left">
-<div style="display: inline-flex"> <img src="https://smp.uq.edu.au/sites/smp.uq.edu.au/files/styles/uq_core_small_portrait/public/ckfinder/images/staff_profile/12000.jpeg?itok=us0Fls-N" alt="Drawing" style="height: 300px;"/> </div>
+::: {}
+<a class="twitter-timeline" data-width="500" data-height="300" href="https://twitter.com/TresBienHien?ref_src=twsrc%5Etfw">Tweets by TresBienHien</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+:::
+
+::::
 
 ---
 
@@ -33,6 +39,9 @@ nocite: '@*'
 
 ---
 
+:::: {style="display: flex;"}
+
+::: {}
 Dr. Hien Duy Nguyen
 
 Senior Lecturer
@@ -44,19 +53,31 @@ Building 69 -- Room 618
 University of Queensland
 
 St. Lucia, Queensland, Australia
+:::
+
+::: {}
+$~~~$
+:::
+
+::: {}
 
 Email: h.nguyen7@uq.edu.au
 
 Curriculum vitae: [click here to download](https://github.com/hiendn/CV/blob/master/Master_CV.pdf)
 
 <div itemscope itemtype="https://schema.org/Person"><a itemprop="sameAs" content="https://orcid.org/0000-0002-9958-432X" href="https://orcid.org/0000-0002-9958-432X" target="orcid.widget" rel="noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">orcid.org/0000-0002-9958-432X</a></div>
+&nbsp;
 
 <a href="https://www.researchgate.net/profile/Hien_Nguyen25">Hien Duy Nguyen on ResearchGate</a>
 <br>
+&nbsp;
 <!-- Place this tag in your head or just before your close body tag. -->
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 <!-- Place this tag where you want the button to render. -->
 <a class="github-button" href="https://github.com/hiendn" data-size="large" data-show-count="true" aria-label="Follow @hiendn on GitHub">Follow \@hiendn</a>
+:::
+
+::::
 
 --- 
 
@@ -64,20 +85,20 @@ Curriculum vitae: [click here to download](https://github.com/hiendn/CV/blob/mas
 
 ---
 
-**Roles**
+### Roles
 
 * Senior Lecturer at the University of Queensland in Brisbane, Australia (2021--Present)
 * Adjunct Senior Lecturer at La Trobe University in Melbourne, Australia (2021--Present).
 * Handling Editor (Statistical Computing) and Associate Editor of the Australian and New Zealand Journal of Statistics (2019--Present).
 * Technical Editor of the Australian and New Zealand Journal of Statistics (2018--Present).
 
-**Major Projects**
+### Major Projects
 
 *ARC DP180101192 (with Geoff McLachlan, UQ; and Sharon Lee, UQ): Classification methods for providing personalised and class decisions.*
 
 * This project provides a novel approach to the clustering of multivariate samples on entities in a class that automatically matches the sample clusters across the entities, allowing for inter-sample variation between the samples in a class. The project aims to develop a widely applicable, mixture-model-based framework for the simultaneous clustering of multivariate samples with inter-sample variation in a class and for the matching of the clusters across the entities in the class. The project will use a statistical approach to automatically match the clusters, since the overall mixture model provides a template for the class. It will provide a basis for discriminating between different classes in addition to the identification of atypical data points within a sample and of anomalous samples within a class. Key applications include biological image analysis and the analysis of data in flow cytometry which is one of the fundamental research tools for the life scientist.
 
-**Past Projects**
+### Past Projects
 
 *ARC DE170101134: Feasible algorithms for big inference.*
 

@@ -20,7 +20,7 @@ nocite: '@*'
 :::: {style="display: flex;"}
 
 ::: {}
-<img src="https://smp.uq.edu.au/sites/smp.uq.edu.au/files/styles/uq_core_small_portrait/public/ckfinder/images/staff_profile/12000.jpeg?itok=us0Fls-N" alt="Drawing" style="height: 300px;"/>
+<img src="https://smp.uq.edu.au/sites/smp.uq.edu.au/files/styles/uq_core_small_portrait/public/ckfinder/images/staff_profile/12000.jpeg?itok=us0Fls-N" style="display: flex; object-fit: cover; height: 300px; width: inherit; overflow: hidden;"/>
 :::
 
 ::: {}

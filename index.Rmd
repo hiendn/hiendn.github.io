@@ -106,13 +106,13 @@ Hien Nguyen is a Senior Lecturer at the University of Queensland who specializes
 
 **ARC DP180101192 (with Geoff McLachlan, UQ; and Sharon Lee, UQ): Classification methods for providing personalised and class decisions.**
 
-*2018-–2022*
+*2018–2022*
 
 * The project provided a novel approach to clustering multivariate samples on entities in a class that automatically matched the sample clusters across the entities. The project aimed to develop a mixture-model-based framework for simultaneous clustering with inter-sample variation in a class and for matching the clusters across the entities. The statistical approach automatically matched the clusters, and the overall mixture model provided a template for the class. The project was useful for biological image analysis and data analysis in flow cytometry.
 
 **ARC DE170101134: Feasible algorithms for big inference.**
 
-*2017-–2020*
+*2017-2020*
 
 * The project aimed to develop algorithms for computationally-intensive statistical tools to analyse Big Data. Big Data is widely used in various fields, but requires specialized machine learning methods for accurate inferential analysis. Many traditional tools of statistical inference are inadequate due to computational limitations. The project focused on developing tools such as false discovery rate control, heteroscedastic and robust regression, and mixture models, using optimization and composite-likelihood estimation techniques appropriate for Big Data. The project aimed to make the resulting software openly available for scalable and distributable analysis of Big Data. The outcome was a suite of scalable algorithms for analyzing Big Data.
 

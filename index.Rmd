@@ -85,13 +85,17 @@ Curriculum vitae: [click here to download](https://github.com/hiendn/CV/blob/mas
 
 ---
 
-Hien Nguyen is a Senior Lecturer at the University of Queensland who specializes in optimization algorithms for complex and heterogeneous statistical and machine learning models, as well as inferential tools for such models. His research has been applied in neuroimaging, agriculture, genetics, proteomics, economics, and public health. He previously worked at La Trobe University as a Senior Lecturer and served as an SSA Vic Council member in 2021. From 2017 to 2020, he was an ARC DECRA Fellow, and he currently serves as the Statistical Computing and Technical Editor for the society's journal: The Australian and New Zealand Journal of Statistics. In his free time, he enjoys spending time with his two cats, Nyx and Penelope.
+Hien Nguyen is a Senior Lecturer at the University of Queensland specializing in optimization algorithms for statistical and machine learning models, as well as inferential tools for such models. His research has been applied in various fields including neuroimaging, agriculture, genetics, proteomics, economics, and public health. Prior to his current position, he held the role of Senior Lecturer at La Trobe University and was a member of the Statistical Society of Australia (SSA) Vic Council from 2019 to 2021.
+
+From 2017 to 2020, Hien Nguyen served as an ARC DECRA Fellow, contributing to research in his field. Additionally, he has been appointed as the Statistical Computing Editor for the Australian and New Zealand Journal of Statistics (ANZJS) from 2019 to 2023, demonstrating his expertise and commitment to scholarly publications. Hien Nguyen currently holds the positions of SSA Queensland President, along with being the Book Reviews Editor and Technical Editor for ANZJS.
+
+In his free time, Hien Nguyen enjoys spending time with his three cats, Nyx, Penelope, and Beau.
 
 ### Roles
 
 * Senior Lecturer at the University of Queensland in Brisbane, Australia (2021--Present)
 * Adjunct Senior Lecturer at La Trobe University in Melbourne, Australia (2021--Present).
-* Handling Editor (Statistical Computing) and Associate Editor of the Australian and New Zealand Journal of Statistics (2019--Present).
+* Handling Editor (Book Reviews) and Associate Editor of the Australian and New Zealand Journal of Statistics (2019--Present).
 * Technical Editor of the Australian and New Zealand Journal of Statistics (2018--Present).
 
 ### Major Projects

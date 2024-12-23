@@ -21,14 +21,9 @@ nocite: '@*'
 
 ::: {}
 <img src="Untitled_files/Portrait.JPG" style="display: flex; object-fit: cover; height: 300px; width: inherit; overflow: hidden;"/>
-:::
 
 ::: {}
 $~~~$
-:::
-
-::: {}
-<a class="twitter-timeline" data-height="300" data-width="500" href="https://twitter.com/TresBienHien?ref_src=twsrc%5Etfw">Tweets by TresBienHien</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 :::
 
 ::::

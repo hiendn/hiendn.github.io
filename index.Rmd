@@ -93,11 +93,18 @@ In his free time, Hien Nguyen enjoys bushwalking and spending time with his thre
 * Professor at the Institute of Mathematics for Industry, Kyushu University in Fukuoka, Japan (2023--Present)
 * Associate Professor at La Trobe University in Melbourne, Australia (2023--Present)
 * Honorary Associate Professor at the University of Queensland in Brisbane, Australia (2023--Present).
-* President of the Statistical Society of Australia, Queensland Branch (2023--Present)
+
+* Executive Editor of Statistical Analysis and Data Mining (2024--Present)
+* Associate Editor of the Japanese Journal of Statistics and Data Science (2024--Present)
+* Associate Editor of the International Journal of Mathematics for Industry (2024--Present)
 * Handling Editor (Book Reviews) and Associate Editor of the Australian and New Zealand Journal of Statistics (2019--Present).
 * Technical Editor of the Australian and New Zealand Journal of Statistics (2018--Present).
 
 ### Major Projects
+**ARC DP230100905 (with Xin Guo, UQ; Florence Forbes, Inria; Gersende Fort, IMT): Stochastic majorization--minimization algorithms for data science.**
+
+* Advancing statistical models for clustering data with structured dependence. Modern data present increasingly complexities such as heterogeneity and structured dependence among data. Ignoring these features can result in misleading findings. This project aims to develop novel methods to identify important subgroups in data with various forms of dependence. It will introduce techniques that can capture complex relationships in data and enhance model validity. Main outcomes include advanced methods and algorithms that can accurately identify clusters, patterns, outliers, and model evaluation. This will provide significant benefits in statistics and for crime prevention in Australia when the new methods are applied to Queensland Police Service data to understand co-offending crimes, repeat victimisation, and hot spots.
+
 
 **ARC DP230100905 (with Xin Guo, UQ; Florence Forbes, Inria; Gersende Fort, IMT): Stochastic majorization--minimization algorithms for data science.**
 

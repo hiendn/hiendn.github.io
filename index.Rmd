@@ -34,7 +34,6 @@ $~~~$
 
 ---
 
-:::: {style="display: flex;"}
 
 ::: {}
 Dr. Hien Duy Nguyen

@@ -100,7 +100,9 @@ In his free time, Hien Nguyen enjoys bushwalking and spending time with his thre
 * Technical Editor of the Australian and New Zealand Journal of Statistics (2018--Present).
 
 ### Major Projects
-**ARC DP230100905 (with Xin Guo, UQ; Florence Forbes, Inria; Gersende Fort, IMT): Stochastic majorization--minimization algorithms for data science.**
+**ARC DP250100860 (with Shu-Kay Ng, Griffith University; Florence Forbes, Inria; Liming Xiang, NTU Singapore): Advancing statistical models for clustering data with structured dependence.**
+
+*2025--2027*
 
 * Advancing statistical models for clustering data with structured dependence. Modern data present increasingly complexities such as heterogeneity and structured dependence among data. Ignoring these features can result in misleading findings. This project aims to develop novel methods to identify important subgroups in data with various forms of dependence. It will introduce techniques that can capture complex relationships in data and enhance model validity. Main outcomes include advanced methods and algorithms that can accurately identify clusters, patterns, outliers, and model evaluation. This will provide significant benefits in statistics and for crime prevention in Australia when the new methods are applied to Queensland Police Service data to understand co-offending crimes, repeat victimisation, and hot spots.
 

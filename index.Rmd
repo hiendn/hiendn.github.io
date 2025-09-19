@@ -3,10 +3,11 @@ title: "Hien Duy Nguyen, PhD"
 output:
   html_document: 
     theme: flatly
-    toc: true
-    toc_float:
-      collapsed: false
-      smooth_scroll: true
+    toc: false           # using custom floating TOC below
+    number_sections: false
+    df_print: paged
+    self_contained: true
+    md_extensions: +fenced_divs
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 bibliography: 
   - "Untitled_files/pr_articles.bib"
@@ -15,103 +16,217 @@ bibliography:
   - "Untitled_files/OtherPublications.bib"
 csl: "Untitled_files/style.csl"
 nocite: '@*'
+link-citations: true
 ---
 
-:::: {style="display: flex;"}
+```{r setup, include=FALSE}
+# Ensure assets exist before pandoc reads them
+dir.create("Untitled_files", showWarnings = FALSE)
+download.file("https://raw.githubusercontent.com/hiendn/CV/master/pr_articles.bib", "Untitled_files/pr_articles.bib", quiet = TRUE, mode = "wb")
+download.file("https://raw.githubusercontent.com/hiendn/CV/master/pr_inproceedings.bib", "Untitled_files/pr_inproceedings.bib", quiet = TRUE, mode = "wb")
+download.file("https://raw.githubusercontent.com/citation-style-language/styles/master/apa-cv.csl","Untitled_files/style.csl", quiet = TRUE, mode = "wb")
+download.file("https://raw.githubusercontent.com/hiendn/CV/master/pr_bookchapters.bib","Untitled_files/pr_bookchapters.bib", quiet = TRUE, mode = "wb")
+download.file("https://raw.githubusercontent.com/hiendn/CV/master/OtherPublications.bib","Untitled_files/OtherPublications.bib", quiet = TRUE, mode = "wb")
+```
 
-::: {}
-<img src="Untitled_files/Portrait.JPG" style="display: flex; object-fit: cover; height: 300px; width: inherit; overflow: hidden;"/>
+<style>
+/* ---- Very dark theme (not pure black) ---- */
+:root{
+  --bg: #0f1117;
+  --panel: #12151c;
+  --text: #e7e9ee;
+  --muted: #b6bcc6;
+  --border: #232836;
+  --link: #7aa2ff;
+  --link-hover: #a9c4ff;
+  --code-bg: #161a22;
+}
+html, body { background: var(--bg) !important; color: var(--text); scroll-behavior: smooth; }
+a, a:visited { color: var(--link); }
+a:hover, a:focus { color: var(--link-hover); }
+h1, h2, h3, h4, h5, h6 { color: var(--text); }
+hr { border-color: var(--border); }
+pre, code, pre code { background: var(--code-bg) !important; color: var(--text); }
 
-::: {}
-$~~~$
+/* ---- Center & slightly narrow the main content column ---- */
+.main-container, body > .container-fluid {
+  max-width: 880px;              /* narrower column => larger side margins */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;            /* gentle inner padding */
+  padding-right: 24px;
+}
+
+/* ---- Custom floating TOC (left side) ---- */
+#floating-toc {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 10px 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,.35);
+  z-index: 999;
+  /* default (small screens): inline at top */
+  position: static;
+  width: auto;
+  max-height: none;
+  margin-bottom: 16px;
+}
+#floating-toc .toc-title { font-weight: 700; margin: 4px 0 8px 0; color: var(--muted); }
+#floating-toc ul { list-style: none; padding-left: 0; margin: 0; }
+#floating-toc li { margin: 6px 0; }
+#floating-toc li.h3 { margin-left: 14px; font-size: 90%; }
+#floating-toc a { color: var(--text); text-decoration: none; }
+#floating-toc a:hover { color: var(--link-hover); text-decoration: none; }
+
+/* Float beside content on >= 840px width, on the LEFT */
+@media (min-width: 840px){
+  #floating-toc {
+    position: fixed !important;
+    left: 20px; top: 80px;
+    width: 260px;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    margin-bottom: 0;
+  }
+  body { padding-left: 300px; }  /* keep content from sliding under the TOC */
+}
+
+/* Panels/boxes built from fenced divs */
+.box {
+  background: var(--panel); border:1px solid var(--border);
+  border-radius:12px; padding:12px; box-shadow:0 2px 6px rgba(0,0,0,.25);
+}
+
+/* Hanging indent for references (Pandoc/CSL output) */
+.references, .csl-bib-body { margin:0; }
+.csl-entry { margin: 0 0 .6em 0; text-indent: -1.5em; padding-left: 1.5em; }
+
+/* Footer */
+footer.site-footer { margin-top:60px; padding:20px 0; color:var(--muted); border-top:1px solid var(--border); font-size:90%; }
+</style>
+
+<!-- Custom floating TOC container -->
+<nav id="floating-toc" aria-label="Table of contents">
+  <div class="toc-title">Contents</div>
+  <ul id="floating-toc-list"></ul>
+</nav>
+
+<script>
+// Build a TOC from H2/H3 headings (skip the hero H1)
+document.addEventListener('DOMContentLoaded', function(){
+  var list = document.getElementById('floating-toc-list');
+  if (!list) return;
+  var headings = Array.prototype.slice.call(document.querySelectorAll('h2, h3'));
+  headings = headings.filter(function(h){ return !h.closest('.toc-ignore'); });
+  headings.forEach(function(h){
+    if (!h.id) {
+      var id = h.textContent.trim().toLowerCase().replace(/[^\w]+/g,'-').replace(/(^-|-$)/g,'');
+      if (!id) id = 'section-' + Math.random().toString(36).slice(2,8);
+      var base = id, k = 2;
+      while (document.getElementById(id)) { id = base + '-' + k++; }
+      h.id = id;
+    }
+    var li = document.createElement('li');
+    if (h.tagName === 'H3') li.className = 'h3';
+    var a = document.createElement('a');
+    a.href = '#' + h.id;
+    a.textContent = h.textContent;
+    li.appendChild(a);
+    list.appendChild(li);
+  });
+});
+</script>
+
+<!-- HERO -->
+:::: {style="display:flex; flex-wrap:wrap; align-items:flex-start; gap:16px; margin-top:10px; padding:20px; background:var(--panel); border:1px solid var(--border); border-radius:12px;"}
+
+::: {style="flex:0 0 220px; max-width:220px; text-align:center;"}
+<img src="Untitled_files/Portrait.JPG" alt="Portrait of Hien Duy Nguyen"
+     style="width:100%; height:auto; border-radius:50%; display:block;" />
+:::
+
+::: {style="flex:1 1 320px; min-width:300px;"}
+<h1 style="margin:0 0 6px 0;">Hien Duy Nguyen, PhD</h1>
+<p style="margin:0 0 10px 0;">Associate Professor, La Trobe University · Professor (IMI), Kyushu University</p>
+<p style="margin:0 0 8px 0;">
+  <strong>Email:</strong> <a href="mailto:h.nguyen5@latrobe.edu.au">h.nguyen5@latrobe.edu.au</a>
+  &nbsp;·&nbsp; <strong>CV:</strong> <a href="https://github.com/hiendn/CV/blob/master/Master_CV.pdf">Download</a>
+</p>
+<p style="margin:0;">
+  <a href="https://orcid.org/0000-0002-9958-432X">ORCID: 0000-0002-9958-432X</a>
+  &nbsp;·&nbsp; <a href="https://www.researchgate.net/profile/Hien_Nguyen25">ResearchGate</a>
+  &nbsp;·&nbsp; <a href="https://github.com/hiendn">GitHub</a>
+</p>
 :::
 
 ::::
 
 ---
 
-## Contact Details 
+## Contact Details
 
 ---
 
+:::: {style="display:flex; flex-wrap:wrap; gap:16px;"}
 
-::: {}
-Dr. Hien Duy Nguyen
-
-Associate Professor
-
-School of Computing, Engineering and Mathematical Sciences
-
-La Trobe University
-
+::: {class="box" style="flex:1 1 320px;"}
+<div style="font-weight:600; margin-bottom:8px;">Primary affiliation</div>
+Dr. Hien Duy Nguyen<br>
+Associate Professor<br>
+School of Computing, Engineering and Mathematical Sciences<br>
+La Trobe University<br>
 Bundoora, Victoria, Australia
 :::
 
-::: {}
-$~~~$
-:::
-
-::: {}
-
-Email: h.nguyen5@latrobe.edu.au
-
-Curriculum vitae: [click here to download](https://github.com/hiendn/CV/blob/master/Master_CV.pdf)
-
-<div itemscope itemtype="https://schema.org/Person"><a itemprop="sameAs" content="https://orcid.org/0000-0002-9958-432X" href="https://orcid.org/0000-0002-9958-432X" target="orcid.widget" rel="noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">orcid.org/0000-0002-9958-432X</a></div>
-&nbsp;
-
-<a href="https://www.researchgate.net/profile/Hien_Nguyen25">Hien Duy Nguyen on ResearchGate</a>
-<br>
-&nbsp;
-<!-- Place this tag in your head or just before your close body tag. -->
-<script async defer src="https://buttons.github.io/buttons.js"></script>
-<!-- Place this tag where you want the button to render. -->
-<a class="github-button" href="https://github.com/hiendn" data-size="large" data-show-count="true" aria-label="Follow @hiendn on GitHub">Follow \@hiendn</a>
+::: {class="box" style="flex:1 1 320px;"}
+<div style="font-weight:600; margin-bottom:8px;">Profiles & links</div>
+<ul style="list-style:none; padding-left:0; margin:0;">
+  <li><a href="mailto:h.nguyen5@latrobe.edu.au">h.nguyen5@latrobe.edu.au</a></li>
+  <li><a href="https://orcid.org/0000-0002-9958-432X">ORCID: 0000-0002-9958-432X</a></li>
+  <li><a href="https://www.researchgate.net/profile/Hien_Nguyen25">ResearchGate</a></li>
+  <li><a href="https://github.com/hiendn">GitHub</a></li>
+</ul>
 :::
 
 ::::
 
---- 
+---
 
 ## Brief Bio
 
 ---
 
-
-
 Hien Nguyen holds dual positions as an Associate Professor at La Trobe University in Australia and a Professor at the Institute of Mathematics for Industry at Kyushu University in Japan. His role focuses on building collaborative relationships between the two institutions and the two countries at large to foster new innovative research in mathematical and computational statistics, as well as the applications of such developments. Hien also holds an Honorary Associate Professorship at his Alma Mater, the University of Queensland in Brisbane, Australia, where he continues to supervise students.
 
-Hien has a strong interest in the research of computational statistics and its interaction with the fields of machine learning and AI. His research focuses on the analysis of large datasets that are acquired incrementally or are too large for conventional computers. In such settings, his work centers around the use of methods such as stochastic optimization theory and Bayesian inference to handle such difficulties. He is also interested in the development of rigorous statistical tools for choosing between models when data are complex and for testing the validity of such choices, as well as providing confidence statements regarding the goodness of inferential decisions in practice.
+Hien has a strong interest in the research of computational statistics and its interaction with the fields of machine learning and AI. His research focuses on the analysis of large datasets that are acquired incrementally or are too large for conventional computers. In such settings, his work centres on the use of methods such as stochastic optimisation theory and Bayesian inference to handle such difficulties. He is also interested in the development of rigorous statistical tools for choosing between models when data are complex and for testing the validity of such choices, as well as providing confidence statements regarding the goodness of inferential decisions in practice.
 
-Hien's methods have found applications in multiple areas of applied research, including neuroimaging, agriculture, genetics and genomics, proteomics, quantum computing, economics, public policy, and social sciences. Outside of his work, Hien Nguyen currently holds editorial roles with the Australian and New Zealand Journal of Statistics, the Japanese Journal of Statistics and Data Science, the International Journal of Mathematics for Industry, and Statistical Analysis and Data Mining.
+Hien's methods have found applications in multiple areas of applied research, including neuroimaging, agriculture, genetics and genomics, proteomics, quantum computing, economics, public policy, and social sciences. Outside of his work, Hien Nguyen currently holds editorial roles with the *Australian and New Zealand Journal of Statistics*, the *Japanese Journal of Statistics and Data Science*, the *International Journal of Mathematics for Industry*, and *Statistical Analysis and Data Mining*.
 
 In his free time, Hien Nguyen enjoys bushwalking and spending time with his three cats: Nyx, Penelope, and Beau.
 
 ### Roles
 
-* Professor at the Institute of Mathematics for Industry, Kyushu University in Fukuoka, Japan (2023--Present)
-* Associate Professor at La Trobe University in Melbourne, Australia (2023--Present)
-* Honorary Associate Professor at the University of Queensland in Brisbane, Australia (2023--Present).
-
-* Executive Editor of Statistical Analysis and Data Mining (2024--Present)
-* Associate Editor of the Japanese Journal of Statistics and Data Science (2024--Present)
-* Associate Editor of the International Journal of Mathematics for Industry (2024--Present)
-* Handling Editor (Book Reviews) and Associate Editor of the Australian and New Zealand Journal of Statistics (2019--Present).
-* Technical Editor of the Australian and New Zealand Journal of Statistics (2018--Present).
+* Professor at the Institute of Mathematics for Industry, Kyushu University in Fukuoka, Japan (2023–Present)
+* Associate Professor at La Trobe University in Melbourne, Australia (2023–Present)
+* Honorary Associate Professor at the University of Queensland in Brisbane, Australia (2023–Present).
+* Executive Editor of *Statistical Analysis and Data Mining* (2024–Present)
+* Associate Editor of the *Japanese Journal of Statistics and Data Science* (2024–Present)
+* Associate Editor of the *International Journal of Mathematics for Industry* (2024–Present)
+* Handling Editor (Book Reviews) and Associate Editor of the *Australian and New Zealand Journal of Statistics* (2019–Present).
+* Technical Editor of the *Australian and New Zealand Journal of Statistics* (2018–Present).
 
 ### Major Projects
 **ARC DP250100860 (with Shu-Kay Ng, Griffith University; Florence Forbes, Inria; Liming Xiang, NTU Singapore): Advancing statistical models for clustering data with structured dependence.**
 
-*2025--2027*
+*2025–2027*
 
-* Advancing statistical models for clustering data with structured dependence. Modern data present increasingly complexities such as heterogeneity and structured dependence among data. Ignoring these features can result in misleading findings. This project aims to develop novel methods to identify important subgroups in data with various forms of dependence. It will introduce techniques that can capture complex relationships in data and enhance model validity. Main outcomes include advanced methods and algorithms that can accurately identify clusters, patterns, outliers, and model evaluation. This will provide significant benefits in statistics and for crime prevention in Australia when the new methods are applied to Queensland Police Service data to understand co-offending crimes, repeat victimisation, and hot spots.
+* Advancing statistical models for clustering data with structured dependence. Modern data present increasing complexities such as heterogeneity and structured dependence among data. Ignoring these features can result in misleading findings. This project aims to develop novel methods to identify important subgroups in data with various forms of dependence. It will introduce techniques that can capture complex relationships in data and enhance model validity. Main outcomes include advanced methods and algorithms that can accurately identify clusters, patterns, outliers, and model evaluation. This will provide significant benefits in statistics and for crime prevention in Australia when the new methods are applied to Queensland Police Service data to understand co-offending crimes, repeat victimisation, and hot spots.
 
+**ARC DP230100905 (with Xin Guo, UQ; Florence Forbes, Inria; Gersende Fort, IMT): Stochastic majorisation–minimisation algorithms for data science.**
 
-**ARC DP230100905 (with Xin Guo, UQ; Florence Forbes, Inria; Gersende Fort, IMT): Stochastic majorization--minimization algorithms for data science.**
+*2023–2025*
 
-*2023--2025*
-
-* The proposed project aims to study the family of stochastic majorisation-minimisation algorithms for the computation of inferential quantities in an incremental manner. These algorithms can be used to produce feasible and practical algorithms for complex models, both current and future. The project will develop new frameworks for constructing algorithms that allow for rapid, accurate, and robust inference of large, complex datasets. These tools will support practitioners in various fields, such as logistics, business analysis, economics, and meteorology, to make fast decisions with greater confidence. The algorithms developed will be universal and can be applied in many data analytic settings. They will be distributed widely via convenient and adaptable software in open-source repositories.
+* The proposed project studies the family of stochastic majorisation–minimisation algorithms for the computation of inferential quantities in an incremental manner. The project develops new frameworks for constructing algorithms that allow for rapid, accurate, and robust inference of large, complex datasets. Tools are distributed via open-source software.
 
 ### Past Projects
 
@@ -123,9 +238,9 @@ In his free time, Hien Nguyen enjoys bushwalking and spending time with his thre
 
 **ARC DE170101134: Feasible algorithms for big inference.**
 
-*2017-2020*
+*2017–2020*
 
-* The project aimed to develop algorithms for computationally-intensive statistical tools to analyse Big Data. Big Data is widely used in various fields, but requires specialized machine learning methods for accurate inferential analysis. Many traditional tools of statistical inference are inadequate due to computational limitations. The project focused on developing tools such as false discovery rate control, heteroscedastic and robust regression, and mixture models, using optimization and composite-likelihood estimation techniques appropriate for Big Data. The project aimed to make the resulting software openly available for scalable and distributable analysis of Big Data. The outcome was a suite of scalable algorithms for analyzing Big Data.
+* The project aimed to develop algorithms for computationally-intensive statistical tools to analyse Big Data. Big Data is widely used in various fields, but requires specialised machine learning methods for accurate inferential analysis. Many traditional tools of statistical inference are inadequate due to computational limitations. The project focused on developing tools such as false discovery rate control, heteroscedastic and robust regression, and mixture models, using optimisation and composite-likelihood estimation techniques appropriate for Big Data. The project aimed to make the resulting software openly available for scalable and distributable analysis of Big Data. The outcome was a suite of scalable algorithms for analysing Big Data.
 
 ---
 
@@ -133,12 +248,9 @@ In his free time, Hien Nguyen enjoys bushwalking and spending time with his thre
 
 ---
 
+<!-- Place Pandoc-rendered bibliography here -->
+<div id="refs"></div>
 
-```{r, echo = FALSE, warning=FALSE}
-dir.create("Untitled_files")
-download.file("https://raw.githubusercontent.com/hiendn/CV/master/pr_articles.bib", "Untitled_files/pr_articles.bib")
-download.file("https://raw.githubusercontent.com/hiendn/CV/master/pr_inproceedings.bib", "Untitled_files/pr_inproceedings.bib")
-download.file("https://raw.githubusercontent.com/citation-style-language/styles/master/apa-cv.csl","Untitled_files/style.csl")
-download.file("https://raw.githubusercontent.com/hiendn/CV/master/pr_bookchapters.bib","Untitled_files/pr_bookchapters.bib")
-download.file("https://raw.githubusercontent.com/hiendn/CV/master/OtherPublications.bib","Untitled_files/OtherPublications.bib")
-```
+<footer class="site-footer">
+  © `r format(Sys.Date(), '%Y')` Hien Duy Nguyen · Last updated `r format(Sys.time(), '%d %B, %Y')`
+</footer>

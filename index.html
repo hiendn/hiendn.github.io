@@ -11,7 +11,7 @@
 
 
 
-<title>Hien Duy Nguyen, PhD</title>
+<title>Hien Duy Nguyen</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -1660,7 +1660,7 @@ display: none;
 
 
 
-<h1 class="title toc-ignore">Hien Duy Nguyen, PhD</h1>
+<h1 class="title toc-ignore">Hien Duy Nguyen</h1>
 <h4 class="date">19 September, 2025</h4>
 
 </div>
@@ -1677,19 +1677,21 @@ display: none;
 --link: #7aa2ff;
 --link-hover: #a9c4ff;
 --code-bg: #161a22;
+--accent: #ff7a45; 
 }
 html, body { background: var(--bg) !important; color: var(--text); scroll-behavior: smooth; }
 a, a:visited { color: var(--link); }
 a:hover, a:focus { color: var(--link-hover); }
-h1, h2, h3, h4, h5, h6 { color: var(--text); }
+
+h1, h2, h3, h4, h5, h6 { color: var(--accent) !important; }
 hr { border-color: var(--border); }
 pre, code, pre code { background: var(--code-bg) !important; color: var(--text); }
 
 .main-container, body > .container-fluid {
-max-width: 880px; 
+max-width: 880px;
 margin-left: auto;
 margin-right: auto;
-padding-left: 24px; 
+padding-left: 24px;
 padding-right: 24px;
 }
 
@@ -1722,7 +1724,7 @@ max-height: calc(100vh - 120px);
 overflow-y: auto;
 margin-bottom: 0;
 }
-body { padding-left: 300px; } 
+body { padding-left: 300px; }
 }
 
 .box {
@@ -1775,7 +1777,7 @@ document.addEventListener('DOMContentLoaded', function(){
 </div>
 <div style="flex:1 1 320px; min-width:300px;">
 <h1 style="margin:0 0 6px 0;">
-Hien Duy Nguyen, PhD
+Hien Duy Nguyen
 </h1>
 <p style="margin:0 0 10px 0;">
 Associate Professor, La Trobe University · Professor (IMI), Kyushu
@@ -1959,7 +1961,7 @@ analysing Big Data.</li>
 <div id="publications" class="section level2">
 <h2>Publications</h2>
 <hr />
-<!-- Place Pandoc-rendered bibliography here -->
+<!-- Pandoc-rendered bibliography lands here -->
 <div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0" line-spacing="2">
 <div id="ref-Chan:2025aa" class="csl-entry">
 Chan, K., Weir, T., Freer, E., Ong, D., &amp; Nguyen, H. (2025). <span class="nocase">Predictability of incisal labiolingual inclination,
@@ -2593,6 +2595,33 @@ learning with applications to genome-wide association studies</span>.
 Evolutionary Computation (CEC)</span></em>.
 </div>
 </div>
+<!-- === Highlight just your name in the bibliography === -->
+<style>
+.self-name { color: var(--accent); font-weight: 700; }
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  // Match variants of your name in APA outputs
+  const patterns = [
+    /\bNguyen,\s*H\.?\s*D\.?\b/g,        // "Nguyen, H. D."
+    /\bNguyen,\s*H\.?(?!\s*[A-Z])/g,     // "Nguyen, H" (not followed by another initial)
+    /\bNguyen,\s*Hien\s*D(?:uy)?\.?\b/g, // "Nguyen, Hien D." or "Nguyen, Hien Duy"
+    /\bHien\s+Duy\s+Nguyen\b/g           // "Hien Duy Nguyen"
+  ];
+
+  const refs = document.querySelectorAll('#refs .csl-entry, .references .csl-entry');
+  refs.forEach(p => {
+    let html = p.innerHTML;
+    // Unwrap any previous runs to prevent nesting
+    html = html.replace(/<(?:strong|span)\s+class=["']self-name["']>([^<]+)<\/(?:strong|span)>/g, '$1');
+    // Wrap matches in a span we can style
+    patterns.forEach(rx => {
+      html = html.replace(rx, m => '<span class="self-name">' + m + '</span>');
+    });
+    p.innerHTML = html;
+  });
+});
+</script>
 <footer class="site-footer">
 © 2025 Hien Duy Nguyen · Last updated 19 September, 2025
 </footer>

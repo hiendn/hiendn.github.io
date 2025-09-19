@@ -1,5 +1,5 @@
 ---
-title: "Hien Duy Nguyen, PhD"
+title: "Hien Duy Nguyen"
 output:
   html_document: 
     theme: flatly
@@ -40,20 +40,24 @@ download.file("https://raw.githubusercontent.com/hiendn/CV/master/OtherPublicati
   --link: #7aa2ff;
   --link-hover: #a9c4ff;
   --code-bg: #161a22;
+  --accent: #ff7a45; /* red–orange accent for headers & highlighted name */
 }
 html, body { background: var(--bg) !important; color: var(--text); scroll-behavior: smooth; }
 a, a:visited { color: var(--link); }
 a:hover, a:focus { color: var(--link-hover); }
-h1, h2, h3, h4, h5, h6 { color: var(--text); }
+
+/* Headings match the accent color */
+h1, h2, h3, h4, h5, h6 { color: var(--accent) !important; }
+
 hr { border-color: var(--border); }
 pre, code, pre code { background: var(--code-bg) !important; color: var(--text); }
 
 /* ---- Center & slightly narrow the main content column ---- */
 .main-container, body > .container-fluid {
-  max-width: 880px;              /* narrower column => larger side margins */
+  max-width: 880px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 24px;            /* gentle inner padding */
+  padding-left: 24px;
   padding-right: 24px;
 }
 
@@ -88,7 +92,7 @@ pre, code, pre code { background: var(--code-bg) !important; color: var(--text);
     overflow-y: auto;
     margin-bottom: 0;
   }
-  body { padding-left: 300px; }  /* keep content from sliding under the TOC */
+  body { padding-left: 300px; }
 }
 
 /* Panels/boxes built from fenced divs */
@@ -146,7 +150,7 @@ document.addEventListener('DOMContentLoaded', function(){
 :::
 
 ::: {style="flex:1 1 320px; min-width:300px;"}
-<h1 style="margin:0 0 6px 0;">Hien Duy Nguyen, PhD</h1>
+<h1 style="margin:0 0 6px 0;">Hien Duy Nguyen</h1>
 <p style="margin:0 0 10px 0;">Associate Professor, La Trobe University · Professor (IMI), Kyushu University</p>
 <p style="margin:0 0 8px 0;">
   <strong>Email:</strong> <a href="mailto:h.nguyen5@latrobe.edu.au">h.nguyen5@latrobe.edu.au</a>
@@ -248,8 +252,37 @@ In his free time, Hien Nguyen enjoys bushwalking and spending time with his thre
 
 ---
 
-<!-- Place Pandoc-rendered bibliography here -->
+<!-- Pandoc-rendered bibliography lands here -->
 <div id="refs"></div>
+
+<!-- === Highlight just your name in the bibliography === -->
+<style>
+  .self-name { color: var(--accent); font-weight: 700; }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  // Match variants of your name in APA outputs
+  const patterns = [
+    /\bNguyen,\s*H\.?\s*D\.?\b/g,        // "Nguyen, H. D."
+    /\bNguyen,\s*H\.?(?!\s*[A-Z])/g,     // "Nguyen, H" (not followed by another initial)
+    /\bNguyen,\s*Hien\s*D(?:uy)?\.?\b/g, // "Nguyen, Hien D." or "Nguyen, Hien Duy"
+    /\bHien\s+Duy\s+Nguyen\b/g           // "Hien Duy Nguyen"
+  ];
+
+  const refs = document.querySelectorAll('#refs .csl-entry, .references .csl-entry');
+  refs.forEach(p => {
+    let html = p.innerHTML;
+    // Unwrap any previous runs to prevent nesting
+    html = html.replace(/<(?:strong|span)\s+class=["']self-name["']>([^<]+)<\/(?:strong|span)>/g, '$1');
+    // Wrap matches in a span we can style
+    patterns.forEach(rx => {
+      html = html.replace(rx, m => '<span class="self-name">' + m + '</span>');
+    });
+    p.innerHTML = html;
+  });
+});
+</script>
 
 <footer class="site-footer">
   © `r format(Sys.Date(), '%Y')` Hien Duy Nguyen · Last updated `r format(Sys.time(), '%d %B, %Y')`

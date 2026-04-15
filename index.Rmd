@@ -204,7 +204,7 @@ Hien Nguyen holds dual positions as an Associate Professor at La Trobe Universit
 
 Hien has a strong interest in the research of computational statistics and its interaction with the fields of machine learning and AI. His research focuses on the analysis of large datasets that are acquired incrementally or are too large for conventional computers. In such settings, his work centres on the use of methods such as stochastic optimisation theory and Bayesian inference to handle such difficulties. He is also interested in the development of rigorous statistical tools for choosing between models when data are complex and for testing the validity of such choices, as well as providing confidence statements regarding the goodness of inferential decisions in practice.
 
-Hien's methods have found applications in multiple areas of applied research, including neuroimaging, agriculture, genetics and genomics, proteomics, quantum computing, economics, public policy, and social sciences. Outside of his work, Hien Nguyen currently holds editorial roles with the *Australian and New Zealand Journal of Statistics*, the *Japanese Journal of Statistics and Data Science*, the *International Journal of Mathematics for Industry*, and *Statistical Analysis and Data Mining*.
+Hien's methods have found applications in multiple areas of applied research, including neuroimaging, agriculture, genetics and genomics, proteomics, quantum computing, economics, public policy, and social sciences. Outside of his work, Hien Nguyen currently holds editorial roles with the *Australian and New Zealand Journal of Statistics*, *Heliyon Mathematics*, the *International Journal of Mathematics for Industry*, and *Statistical Analysis and Data Mining*.
 
 In his free time, Hien Nguyen enjoys bushwalking and spending time with his three cats: Nyx, Penelope, and Beau.
 
@@ -212,39 +212,69 @@ In his free time, Hien Nguyen enjoys bushwalking and spending time with his thre
 
 * Professor at the Institute of Mathematics for Industry, Kyushu University in Fukuoka, Japan (2023–Present)
 * Associate Professor at La Trobe University in Melbourne, Australia (2023–Present)
-* Honorary Associate Professor at the University of Queensland in Brisbane, Australia (2023–Present).
+* Honorary Associate Professor at the University of Queensland in Brisbane, Australia (2023–Present)
 * Executive Editor of *Statistical Analysis and Data Mining* (2024–Present)
-* Associate Editor of the *Japanese Journal of Statistics and Data Science* (2024–Present)
+* Associate Editor of *Heliyon Mathematics* (2026-Present)
 * Associate Editor of the *International Journal of Mathematics for Industry* (2024–Present)
-* Handling Editor (Book Reviews) and Associate Editor of the *Australian and New Zealand Journal of Statistics* (2019–Present).
-* Technical Editor of the *Australian and New Zealand Journal of Statistics* (2018–Present).
+* Book Review Editor of the *Australian and New Zealand Journal of Statistics* (2023–Present)
+* Technical Editor of the *Australian and New Zealand Journal of Statistics* (2018–Present)
 
 ### Major Projects
-**ARC DP250100860 (with Shu-Kay Ng, Griffith University; Florence Forbes, Inria; Liming Xiang, NTU Singapore): Advancing statistical models for clustering data with structured dependence.**
+**Australia’s Economic Accelerator (AEA) Innovate Program IV240100099 (with Aniruddha Desai, Krishnakumar Santhanam, Lalit Yagnik, Mark Jois, Erik van Vulpen, Aidin Bervan, Shanmuga Sundar Dhanabalan, and Phat Huynh): Fully integrated digital technology solution for enhanced dairy farm management.**
 
 *2025–2027*
 
-* Advancing statistical models for clustering data with structured dependence. Modern data present increasing complexities such as heterogeneity and structured dependence among data. Ignoring these features can result in misleading findings. This project aims to develop novel methods to identify important subgroups in data with various forms of dependence. It will introduce techniques that can capture complex relationships in data and enhance model validity. Main outcomes include advanced methods and algorithms that can accurately identify clusters, patterns, outliers, and model evaluation. This will provide significant benefits in statistics and for crime prevention in Australia when the new methods are applied to Queensland Police Service data to understand co-offending crimes, repeat victimisation, and hot spots.
+* This project develops a fully integrated digital technology solution for enhanced dairy farm management.
 
-**ARC DP230100905 (with Xin Guo, UQ; Florence Forbes, Inria; Gersende Fort, IMT): Stochastic majorisation–minimisation algorithms for data science.**
+**ARC DP250100860 (with Shu-Kay Angus Ng, Griffith University; Florence Forbes, Inria; Liming Xiang, Nanyang Technological University): Advancing statistical models for clustering data with structured dependence.**
+
+*2025–2027*
+
+* This project develops statistical models and algorithms for clustering data with structured dependence.
+
+**STARFISH Activity (with Rebecca Chisholm, Mark Davies, Tim Barnett, David Price, Trish Campbell, and Joel Miller): Optimising targeted investigations of Strep A transmission and Environmental Health Initiatives (EHIs) assessment: a model-based approach.**
+
+*2024–2026*
+
+* This project develops model-based methods for targeted investigations of Strep A transmission and Environmental Health Initiatives assessment.
+
+**Inria Associate Teams WOMBAT (with Florence Forbes, Inria): Variance-reduced Optimization Methods and Bayesian Approximation Techniques for scalable inference.**
+
+*2023–2026*
+
+* This project develops variance-reduced optimisation methods and Bayesian approximation techniques for scalable inference.
+
+**ARC DP230100905 (with Xin Guo, University of Queensland; Florence Forbes, Inria; Gersende Fort, CNRS): Stochastic majorization–minimization algorithms for data science.**
 
 *2023–2025*
 
-* The proposed project studies the family of stochastic majorisation–minimisation algorithms for the computation of inferential quantities in an incremental manner. The project develops new frameworks for constructing algorithms that allow for rapid, accurate, and robust inference of large, complex datasets. Tools are distributed via open-source software.
+* This project develops stochastic majorization–minimization algorithms for large-scale data science problems.
 
 ### Past Projects
 
-**ARC DP180101192 (with Geoff McLachlan, UQ; and Sharon Lee, UQ): Classification methods for providing personalised and class decisions.**
+**Australian Government Road Safety Innovation Fund (with Long Truong, La Trobe University): Development of planning-stage crash prediction tools for use at the planning stages.**
 
-*2018–2022*
+*2021–2023*
 
-* The project provided a novel approach to clustering multivariate samples on entities in a class that automatically matched the sample clusters across the entities. The project aimed to develop a mixture-model-based framework for simultaneous clustering with inter-sample variation in a class and for matching the clusters across the entities. The statistical approach automatically matched the clusters, and the overall mixture model provided a template for the class. The project was useful for biological image analysis and data analysis in flow cytometry.
+* This project developed planning-stage crash prediction tools for use in transport planning.
+
+**Inria Associate Teams LANDER (with Florence Forbes, Inria): Latent analysis, adversarial networks, and DimEnsionality Reduction.**
+
+*2019–2021*
+
+* This project supported collaborative work on latent analysis, adversarial networks, and dimensionality reduction.
+
+**ARC DP180101192 (with Geoffrey McLachlan, University of Queensland; and Sharon Lee, University of Queensland): Classification methods for providing personalised and class decisions.**
+
+*2018–2021*
+
+* This project developed classification methods for providing personalised and class decisions.
 
 **ARC DE170101134: Feasible algorithms for big inference.**
 
 *2017–2020*
 
-* The project aimed to develop algorithms for computationally-intensive statistical tools to analyse Big Data. Big Data is widely used in various fields, but requires specialised machine learning methods for accurate inferential analysis. Many traditional tools of statistical inference are inadequate due to computational limitations. The project focused on developing tools such as false discovery rate control, heteroscedastic and robust regression, and mixture models, using optimisation and composite-likelihood estimation techniques appropriate for Big Data. The project aimed to make the resulting software openly available for scalable and distributable analysis of Big Data. The outcome was a suite of scalable algorithms for analysing Big Data.
+* This project developed feasible algorithms for big inference.
 
 ---
 

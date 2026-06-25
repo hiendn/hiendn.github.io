@@ -22,6 +22,17 @@ link-citations: true
 ```{r setup, include=FALSE}
 # Ensure assets exist before pandoc reads them
 dir.create("Untitled_files", showWarnings = FALSE)
+
+# Download the profile portrait so that the self-contained HTML can embed it.
+# If the download fails, the <img> tag below falls back to the public La Trobe URL.
+portrait_url <- "https://scholars.latrobe.edu.au/hnguyen/thumbnail"
+portrait_file <- "Untitled_files/Portrait.jpg"
+tryCatch({
+  download.file(portrait_url, portrait_file, quiet = TRUE, mode = "wb")
+}, error = function(e) {
+  warning("Could not download profile portrait: ", conditionMessage(e))
+})
+
 download.file("https://raw.githubusercontent.com/hiendn/CV/master/pr_articles.bib", "Untitled_files/pr_articles.bib", quiet = TRUE, mode = "wb")
 download.file("https://raw.githubusercontent.com/hiendn/CV/master/pr_inproceedings.bib", "Untitled_files/pr_inproceedings.bib", quiet = TRUE, mode = "wb")
 download.file("https://raw.githubusercontent.com/citation-style-language/styles/master/apa-cv.csl","Untitled_files/style.csl", quiet = TRUE, mode = "wb")
@@ -145,8 +156,8 @@ document.addEventListener('DOMContentLoaded', function(){
 :::: {style="display:flex; flex-wrap:wrap; align-items:flex-start; gap:16px; margin-top:10px; padding:20px; background:var(--panel); border:1px solid var(--border); border-radius:12px;"}
 
 ::: {style="flex:0 0 220px; max-width:220px; text-align:center;"}
-<img src="Untitled_files/Portrait.JPG" alt="Portrait of Hien Duy Nguyen"
-     style="width:100%; height:auto; border-radius:50%; display:block;" />
+<img src="`r if (file.exists('Untitled_files/Portrait.jpg') && file.info('Untitled_files/Portrait.jpg')$size > 0) 'Untitled_files/Portrait.jpg' else portrait_url`" alt="Portrait of Hien Duy Nguyen"
+     style="width:220px; max-width:100%; height:220px; object-fit:cover; border-radius:50%; display:block; margin:0 auto;" />
 :::
 
 ::: {style="flex:1 1 320px; min-width:300px;"}

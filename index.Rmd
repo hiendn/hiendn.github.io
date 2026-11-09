@@ -43,9 +43,7 @@ stopifnot(all(file.exists(required_assets)))
 
 <header class="hero" id="top">
   <div class="hero-copy">
-  <p class="eyebrow">Computational statistics</p>
   <h1>Hien Duy<br><span>Nguyen</span></h1>
-  <p class="hero-focus">Statistical learning, Bayesian inference<br class="desktop-break"> and finite mixture models.</p>
   <p class="hero-appointments">Associate Professor, La Trobe University<br>Professor, Institute of Mathematics for Industry, Kyushu University</p>
   <div class="hero-actions"><a class="button button-primary" href="#publications">Explore publications <span aria-hidden="true">↗</span></a><a class="button button-outline" href="assets/Hien_Nguyen_CV.pdf">Download CV <span class="file-label">PDF</span></a></div>
   </div>

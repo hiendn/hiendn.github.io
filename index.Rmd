@@ -28,159 +28,119 @@ required_assets <- c(
   "Untitled_files/Portrait.jpg", "Untitled_files/style.csl",
   "Untitled_files/pr_articles.bib", "Untitled_files/pr_inproceedings.bib",
   "Untitled_files/pr_bookchapters.bib", "Untitled_files/OtherPublications.bib",
-  "Untitled_files/preprints.bib"
+  "Untitled_files/preprints.bib", "Untitled_files/site.css",
+  "Untitled_files/site.js", "Untitled_files/meta.html", "assets/Hien_Nguyen_CV.pdf"
 )
 stopifnot(all(file.exists(required_assets)))
 ```
 
-<style>
-/* ---- Very dark theme (not pure black) ---- */
-:root{
-  --bg: #0f1117;
-  --panel: #12151c;
-  --text: #e7e9ee;
-  --muted: #b6bcc6;
-  --border: #232836;
-  --link: #7aa2ff;
-  --link-hover: #a9c4ff;
-  --code-bg: #161a22;
-  --accent: #ff7a45; /* red–orange accent for headers & highlighted name */
-}
-html, body { background: var(--bg) !important; color: var(--text); scroll-behavior: smooth; }
-a, a:visited { color: var(--link); }
-a:hover, a:focus { color: var(--link-hover); }
-a { overflow-wrap: anywhere; }
-a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
-img { max-width: 100%; }
-
-/* Headings match the accent color */
-h1, h2, h3, h4, h5, h6 { color: var(--accent) !important; }
-
-hr { border-color: var(--border); }
-pre, code, pre code { background: var(--code-bg) !important; color: var(--text); }
-
-/* ---- Center & slightly narrow the main content column ---- */
-.main-container, body > .container-fluid {
-  max-width: 880px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 24px;
-  padding-right: 24px;
-}
-
-/* ---- Custom floating TOC (left side) ---- */
-#floating-toc {
-  background: var(--panel);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 10px 12px;
-  box-shadow: 0 2px 10px rgba(0,0,0,.35);
-  z-index: 999;
-  /* default (small screens): inline at top */
-  position: static;
-  width: auto;
-  max-height: none;
-  margin-bottom: 16px;
-}
-#floating-toc .toc-title { font-weight: 700; margin: 4px 0 8px 0; color: var(--muted); }
-#floating-toc ul { list-style: none; padding-left: 0; margin: 0; }
-#floating-toc li { margin: 6px 0; }
-#floating-toc li.h3 { margin-left: 14px; font-size: 90%; }
-#floating-toc a { color: var(--text); text-decoration: none; }
-#floating-toc a:hover { color: var(--link-hover); text-decoration: none; }
-
-/* Float beside content on >= 840px width, on the LEFT */
-@media (min-width: 840px){
-  #floating-toc {
-    position: fixed !important;
-    left: 20px; top: 80px;
-    width: 260px;
-    max-height: calc(100vh - 120px);
-    overflow-y: auto;
-    margin-bottom: 0;
-  }
-  body { padding-left: 300px; }
-}
-
-/* Panels/boxes built from fenced divs */
-.box {
-  background: var(--panel); border:1px solid var(--border);
-  border-radius:12px; padding:12px; box-shadow:0 2px 6px rgba(0,0,0,.25);
-}
-
-/* Hanging indent for references (Pandoc/CSL output) */
-.references, .csl-bib-body { margin:0; }
-.csl-entry { margin: 0 0 .6em 0; text-indent: -1.5em; padding-left: 1.5em; }
-#preprint-entries p { margin-bottom: 1em; }
-@media (max-width: 480px) {
-  .main-container, body > .container-fluid { padding-left: 16px; padding-right: 16px; }
-}
-
-/* Footer */
-footer.site-footer { margin-top:60px; padding:20px 0; color:var(--muted); border-top:1px solid var(--border); font-size:90%; }
-</style>
-
-<!-- Custom floating TOC container -->
-<nav id="floating-toc" aria-label="Table of contents">
-  <div class="toc-title">Contents</div>
-  <ul id="floating-toc-list"></ul>
+<a class="skip-link" href="#about">Skip to content</a>
+<nav class="site-nav" aria-label="Main navigation">
+  <a class="wordmark" href="#top">HDN<span>.</span></a>
+  <div class="nav-links"><a href="#about">About</a><a href="#research">Research</a><a href="#publications">Publications</a><a href="#contact">Contact</a></div>
+  <button class="theme-toggle" type="button" aria-label="Switch to light theme">Light</button>
 </nav>
 
-<script>
-// Build a TOC from H2/H3 headings (skip the hero H1)
-document.addEventListener('DOMContentLoaded', function(){
-  var list = document.getElementById('floating-toc-list');
-  if (!list) return;
-  var headings = Array.prototype.slice.call(document.querySelectorAll('h2, h3'));
-  headings = headings.filter(function(h){ return !h.closest('.toc-ignore'); });
-  headings.forEach(function(h){
-    if (!h.id) {
-      var id = h.textContent.trim().toLowerCase().replace(/[^\w]+/g,'-').replace(/(^-|-$)/g,'');
-      if (!id) id = 'section-' + Math.random().toString(36).slice(2,8);
-      var base = id, k = 2;
-      while (document.getElementById(id)) { id = base + '-' + k++; }
-      h.id = id;
-    }
-    var li = document.createElement('li');
-    if (h.tagName === 'H3') li.className = 'h3';
-    var a = document.createElement('a');
-    a.href = '#' + h.id;
-    a.textContent = h.textContent;
-    li.appendChild(a);
-    list.appendChild(li);
-  });
-});
+<header class="hero" id="top">
+  <div class="hero-copy">
+  <p class="eyebrow">Computational statistics</p>
+  <h1>Hien Duy<br><span>Nguyen</span></h1>
+  <p class="hero-focus">Statistical learning, Bayesian inference<br class="desktop-break"> and finite mixture models.</p>
+  <p class="hero-appointments">Associate Professor, La Trobe University<br>Professor, Institute of Mathematics for Industry, Kyushu University</p>
+  <div class="hero-actions"><a class="button button-primary" href="#publications">Explore publications <span aria-hidden="true">↗</span></a><a class="button button-outline" href="assets/Hien_Nguyen_CV.pdf">Download CV <span class="file-label">PDF</span></a></div>
+  </div>
+  <div class="hero-aside"><div class="portrait-frame"><img src="Untitled_files/Portrait.jpg" alt="Hien Duy Nguyen" width="220" height="220"></div><p>La Trobe University<br>Kyushu University</p><a href="mailto:h.nguyen5@latrobe.edu.au">h.nguyen5@latrobe.edu.au</a></div>
+</header>
+
+## About {#about}
+
+Hien Nguyen holds dual positions as an Associate Professor at La Trobe University in Australia and a Professor at the Institute of Mathematics for Industry at Kyushu University in Japan. His role supports research collaboration between the two institutions in mathematical and computational statistics and their applications. He is also Deputy Director of La Trobe's Centre for Technology Infusion. Hien holds an Honorary Associate Professorship at the University of Queensland in Brisbane, Australia, where he continues to supervise students.
+
+Hien's research concerns computational statistics and its connections with machine learning and AI. He studies finite mixture and mixture-of-experts models, Bayesian inference, variational approximation, model selection and stochastic optimisation. His work includes methods for large datasets acquired incrementally or too large for conventional computers, as well as statistical tools for choosing between models and quantifying uncertainty in inferential decisions.
+
+Hien's methods have found applications in neuroimaging, agriculture, genetics and genomics, proteomics, quantum computing, economics, public policy, and social sciences. He holds editorial roles with the *Australian and New Zealand Journal of Statistics*, *Frontiers in Applied Mathematics and Statistics*, *Heliyon Mathematics*, the *International Journal of Mathematics for Industry*, and *Statistical Analysis and Data Mining*.
+
+In his free time, Hien Nguyen enjoys bushwalking and spending time with his three cats: Nyx, Penelope, and Beau.
+
+<details class="details-block roles-block"><summary>Appointments and editorial roles <span aria-hidden="true">+</span></summary>
+
+* Professor at the Institute of Mathematics for Industry, Kyushu University in Fukuoka, Japan (2023–Present)
+* Associate Professor at La Trobe University in Melbourne, Australia (2023–Present)
+* Honorary Associate Professor at the University of Queensland in Brisbane, Australia (2023–Present)
+* Deputy Director of the Centre for Technology Infusion, La Trobe University
+* Elected Member of the Academic Board, La Trobe University (2026–Present)
+* Member of the Board of Graduate Research, La Trobe University (2026–Present)
+* Area Editor of *Statistical Analysis and Data Mining*
+* Associate Editor of *Heliyon Mathematics* (2026-Present)
+* Associate Editor of the *International Journal of Mathematics for Industry* (2024–Present)
+* Book Review Editor of the *Australian and New Zealand Journal of Statistics* (2023–Present)
+* Technical Editor of the *Australian and New Zealand Journal of Statistics* (2018–Present)
+* Associate Editor of *Frontiers in Applied Mathematics and Statistics* (2019–Present)
+
+</details>
+
+## Research projects {#research}
+
+<article class="project-row"><div class="project-date">2026–2028</div><div><h3>Fully integrated digital technology solution for enhanced dairy farm management</h3><p class="project-context">Australia’s Economic Accelerator (AEA) Innovate Program IV240100099 (with Aniruddha Desai, Krishnakumar Santhanam, Lalit Yagnik, Mark Jois, Erik van Vulpen, Aidin Bervan, Shanmuga Sundar Dhanabalan, and Phat Huynh)</p></div></article>
+
+<article class="project-row"><div class="project-date">2026–2027</div><div><h3>Fine-Grained Spectral Intelligence for Early Herbicide-Resistance Detection</h3><p class="project-context">SpectraResist-AI (LISAF/LBS/SCEMS Seed Funding, La Trobe University; with Ali Zia, Ali Bajwa, Taseer Ahmad, Ing Kong, Nadeem Shuakat, Wei Xiang, and Ernesto Valenzuela Dominguez)</p></div></article>
+
+<article class="project-row"><div class="project-date">2025–2027</div><div><h3>Advancing statistical models for clustering data with structured dependence</h3><p class="project-context">ARC DP250100860 (with Shu-Kay Angus Ng, Griffith University; Florence Forbes, Inria; Liming Xiang, Nanyang Technological University)</p></div></article>
+
+<article class="project-row"><div class="project-date">2024–2026</div><div><h3>Optimising targeted investigations of Strep A transmission and Environmental Health Initiatives (EHIs) assessment: a model-based approach</h3><p class="project-context">STARFISH Activity (with Rebecca Chisholm, Mark Davies, Tim Barnett, David Price, Trish Campbell, and Joel Miller)</p></div></article>
+
+<article class="project-row"><div class="project-date">2023–2026</div><div><h3>Variance-reduced Optimization Methods and Bayesian Approximation Techniques for scalable inference</h3><p class="project-context">Inria Associate Teams WOMBAT (with Florence Forbes, Inria)</p></div></article>
+
+<details class="details-block"><summary>Earlier projects <span aria-hidden="true">+</span></summary>
+
+<article class="project-row"><div class="project-date">2023–2025</div><div><h3>Stochastic majorization–minimization algorithms for data science</h3><p class="project-context">ARC DP230100905 (with Xin Guo, University of Queensland; Florence Forbes, Inria; Gersende Fort, CNRS)</p></div></article>
+
+<article class="project-row"><div class="project-date">2021–2023</div><div><h3>Development of planning-stage crash prediction tools for use at the planning stages</h3><p class="project-context">Australian Government Road Safety Innovation Fund (with Long Truong, La Trobe University)</p></div></article>
+
+<article class="project-row"><div class="project-date">2019–2021</div><div><h3>Latent analysis, adversarial networks, and DimEnsionality Reduction</h3><p class="project-context">Inria Associate Teams LANDER (with Florence Forbes, Inria)</p></div></article>
+
+<article class="project-row"><div class="project-date">2018–2021</div><div><h3>Classification methods for providing personalised and class decisions</h3><p class="project-context">ARC DP180101192 (with Geoffrey McLachlan, University of Queensland; and Sharon Lee, University of Queensland)</p></div></article>
+
+<article class="project-row"><div class="project-date">2017–2020</div><div><h3>Feasible algorithms for big inference</h3><p class="project-context">ARC DE170101134</p></div></article>
+
+</details>
+
+## Publications {#publications}
+
+<div class="publication-tools" hidden>
+  <div class="search-row"><label class="search-label" for="publication-search">Search publications</label><input id="publication-search" type="search" placeholder="Title, author, journal or topic…" autocomplete="off"><label class="visually-hidden" for="publication-year">Publication year</label><select id="publication-year"><option value="all">All years</option></select></div>
+  <div class="filter-row"><div class="publication-filters" role="group" aria-label="Work type"><button type="button" class="filter-button active" data-filter="all" aria-pressed="true">All work</button><button type="button" class="filter-button" data-filter="preprint" aria-pressed="false">Recent preprints</button><button type="button" class="filter-button" data-filter="published" aria-pressed="false">Published &amp; other</button></div><span id="publication-count" role="status" aria-live="polite"></span></div>
+</div>
+<p id="publication-empty" class="empty-state" hidden>No publications match this search. Try a different term or year.</p>
+
+### Recent preprints {#recent-preprints}
+
+Preprints first posted within the past two years.
+
+<div id="preprint-entries">
+
+```{r preprints, echo=FALSE, results='asis'}
+preprints <- bibtex::read.bib("Untitled_files/preprints.bib")
+first_posted <- as.Date(vapply(preprints, function(x) x$date, character(1)))
+if (anyNA(first_posted)) stop("Every preprint needs a verified first-submission date.")
+today <- Sys.Date()
+cutoff <- seq(today, by = "-2 years", length.out = 2)[2]
+recent <- first_posted >= cutoff & first_posted <= today
+preprints <- preprints[recent][order(first_posted[recent], decreasing = TRUE)]
+cat(format(preprints, style = "html"), sep = "\n\n")
+```
+
+</div>
+
+### Published works and other contributions {#published-work}
+
+<div id="refs"></div>
+
+<script id="publication-notes" type="application/json">
+{"ref-NguyenNguyenChamroukhiMcLachlan2026LassoMoE":"Published online 16 October 2026. Volume, issue and page details forthcoming."}
 </script>
 
-<!-- HERO -->
-:::: {style="display:flex; flex-wrap:wrap; align-items:flex-start; gap:16px; margin-top:10px; padding:20px; background:var(--panel); border:1px solid var(--border); border-radius:12px;"}
-
-::: {style="flex:0 0 220px; max-width:220px; text-align:center;"}
-<img src="Untitled_files/Portrait.jpg" alt="Portrait of Hien Duy Nguyen"
-     style="width:220px; max-width:100%; height:220px; object-fit:cover; border-radius:50%; display:block; margin:0 auto;" />
-:::
-
-::: {style="flex:1 1 300px; min-width:0;"}
-<h1 style="margin:0 0 6px 0;">Hien Duy Nguyen</h1>
-<p style="margin:0 0 10px 0;">Associate Professor, La Trobe University · Professor (IMI), Kyushu University</p>
-<p style="margin:0 0 8px 0;">
-  <strong>Email:</strong> <a href="mailto:h.nguyen5@latrobe.edu.au">h.nguyen5@latrobe.edu.au</a>
-  &nbsp;·&nbsp; <strong>CV:</strong> <a href="https://github.com/hiendn/CV/blob/master/Master_CV.pdf">Download PDF</a>
-</p>
-<p style="margin:0;">
-  <a href="https://orcid.org/0000-0002-9958-432X">ORCID: 0000-0002-9958-432X</a>
-  &nbsp;·&nbsp; <a href="https://www.researchgate.net/profile/Hien_Nguyen25">ResearchGate</a>
-  &nbsp;·&nbsp; <a href="https://github.com/hiendn">GitHub</a>
-</p>
-:::
-
-::::
-
----
-
-## Contact details
-
----
+## Contact {#contact}
 
 :::: {style="display:flex; flex-wrap:wrap; gap:16px;"}
 
@@ -208,159 +168,6 @@ Bundoora, Victoria, Australia
 
 ::::
 
----
+<footer class="site-footer"><span>© 2026 Hien Duy Nguyen</span><span>Updated 9 November 2026</span><a href="#top">Back to top ↑</a></footer>
 
-## Brief bio
-
----
-
-Hien Nguyen holds dual positions as an Associate Professor at La Trobe University in Australia and a Professor at the Institute of Mathematics for Industry at Kyushu University in Japan. His role supports research collaboration between the two institutions in mathematical and computational statistics and their applications. He is also Deputy Director of La Trobe's Centre for Technology Infusion. Hien holds an Honorary Associate Professorship at the University of Queensland in Brisbane, Australia, where he continues to supervise students.
-
-Hien's research concerns computational statistics and its connections with machine learning and AI. He studies finite mixture and mixture-of-experts models, Bayesian inference, variational approximation, model selection and stochastic optimisation. His work includes methods for large datasets acquired incrementally or too large for conventional computers, as well as statistical tools for choosing between models and quantifying uncertainty in inferential decisions.
-
-Hien's methods have found applications in neuroimaging, agriculture, genetics and genomics, proteomics, quantum computing, economics, public policy, and social sciences. He holds editorial roles with the *Australian and New Zealand Journal of Statistics*, *Frontiers in Applied Mathematics and Statistics*, *Heliyon Mathematics*, the *International Journal of Mathematics for Industry*, and *Statistical Analysis and Data Mining*.
-
-In his free time, Hien Nguyen enjoys bushwalking and spending time with his three cats: Nyx, Penelope, and Beau.
-
-### Roles
-
-* Professor at the Institute of Mathematics for Industry, Kyushu University in Fukuoka, Japan (2023–Present)
-* Associate Professor at La Trobe University in Melbourne, Australia (2023–Present)
-* Honorary Associate Professor at the University of Queensland in Brisbane, Australia (2023–Present)
-* Deputy Director of the Centre for Technology Infusion, La Trobe University
-* Elected Member of the Academic Board, La Trobe University (2026–Present)
-* Member of the Board of Graduate Research, La Trobe University (2026–Present)
-* Area Editor of *Statistical Analysis and Data Mining*
-* Associate Editor of *Heliyon Mathematics* (2026-Present)
-* Associate Editor of the *International Journal of Mathematics for Industry* (2024–Present)
-* Book Review Editor of the *Australian and New Zealand Journal of Statistics* (2023–Present)
-* Technical Editor of the *Australian and New Zealand Journal of Statistics* (2018–Present)
-* Associate Editor of *Frontiers in Applied Mathematics and Statistics* (2019–Present)
-
-### Major projects
-**Australia’s Economic Accelerator (AEA) Innovate Program IV240100099 (with Aniruddha Desai, Krishnakumar Santhanam, Lalit Yagnik, Mark Jois, Erik van Vulpen, Aidin Bervan, Shanmuga Sundar Dhanabalan, and Phat Huynh): Fully integrated digital technology solution for enhanced dairy farm management.**
-
-*2026–2028*
-
-* This project develops a fully integrated digital technology solution for enhanced dairy farm management.
-
-**SpectraResist-AI (LISAF/LBS/SCEMS Seed Funding, La Trobe University; with Ali Zia, Ali Bajwa, Taseer Ahmad, Ing Kong, Nadeem Shuakat, Wei Xiang, and Ernesto Valenzuela Dominguez): Fine-Grained Spectral Intelligence for Early Herbicide-Resistance Detection.**
-
-*2026–2027*
-
-**ARC DP250100860 (with Shu-Kay Angus Ng, Griffith University; Florence Forbes, Inria; Liming Xiang, Nanyang Technological University): Advancing statistical models for clustering data with structured dependence.**
-
-*2025–2027*
-
-* This project develops statistical models and algorithms for clustering data with structured dependence.
-
-**STARFISH Activity (with Rebecca Chisholm, Mark Davies, Tim Barnett, David Price, Trish Campbell, and Joel Miller): Optimising targeted investigations of Strep A transmission and Environmental Health Initiatives (EHIs) assessment: a model-based approach.**
-
-*2024–2026*
-
-* This project develops model-based methods for targeted investigations of Strep A transmission and Environmental Health Initiatives assessment.
-
-**Inria Associate Teams WOMBAT (with Florence Forbes, Inria): Variance-reduced Optimization Methods and Bayesian Approximation Techniques for scalable inference.**
-
-*2023–2026*
-
-* This project develops variance-reduced optimisation methods and Bayesian approximation techniques for scalable inference.
-
-### Earlier projects
-
-**ARC DP230100905 (with Xin Guo, University of Queensland; Florence Forbes, Inria; Gersende Fort, CNRS): Stochastic majorization–minimization algorithms for data science.**
-
-*2023–2025*
-
-* Stochastic majorization–minimization algorithms for large-scale data science problems.
-
-**Australian Government Road Safety Innovation Fund (with Long Truong, La Trobe University): Development of planning-stage crash prediction tools for use at the planning stages.**
-
-*2021–2023*
-
-* This project developed planning-stage crash prediction tools for use in transport planning.
-
-**Inria Associate Teams LANDER (with Florence Forbes, Inria): Latent analysis, adversarial networks, and DimEnsionality Reduction.**
-
-*2019–2021*
-
-* This project supported collaborative work on latent analysis, adversarial networks, and dimensionality reduction.
-
-**ARC DP180101192 (with Geoffrey McLachlan, University of Queensland; and Sharon Lee, University of Queensland): Classification methods for providing personalised and class decisions.**
-
-*2018–2021*
-
-* This project developed classification methods for providing personalised and class decisions.
-
-**ARC DE170101134: Feasible algorithms for big inference.**
-
-*2017–2020*
-
-* This project developed feasible algorithms for big inference.
-
----
-
-## Publications
-
----
-
-### Preprints
-
-Public preprints are listed below. Acceptance is noted where confirmed.
-
-<div id="preprint-entries">
-
-```{r preprints, echo=FALSE, results='asis'}
-preprints <- bibtex::read.bib("Untitled_files/preprints.bib")
-preprint_years <- vapply(preprints, function(x) as.integer(x$year), integer(1))
-preprints <- preprints[order(preprint_years, decreasing = TRUE)]
-cat(format(preprints, style = "html"), sep = "\n\n")
-```
-
-</div>
-
-### Published works and other contributions
-
-<!-- Pandoc-rendered bibliography lands here -->
-<div id="refs"></div>
-
-<!-- === Highlight just your name in the bibliography === -->
-<style>
-  .self-name { color: var(--accent); font-weight: 700; }
-</style>
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  // Process text once so that names are never nested or link markup changed.
-  const namePattern = /\b(?:Nguyen,\s*Hien\s+D(?:uy)?\.?(?!\w)|Nguyen,\s*H\.?\s*D\.?(?!\w)|Nguyen,\s*H\.?(?![\w.]|\s*[A-Z])|Hien\s+Duy\s+Nguyen\b|Nguyen\s+HD\b)/g;
-  const entries = document.querySelectorAll('#refs .csl-entry, #preprint-entries p');
-  entries.forEach(entry => {
-    const walker = document.createTreeWalker(entry, NodeFilter.SHOW_TEXT);
-    const nodes = [];
-    while (walker.nextNode()) {
-      if (!walker.currentNode.parentElement.closest('a, .self-name')) nodes.push(walker.currentNode);
-    }
-    nodes.forEach(node => {
-      const text = node.textContent;
-      const fragment = document.createDocumentFragment();
-      let previous = 0;
-      for (const match of text.matchAll(namePattern)) {
-        fragment.appendChild(document.createTextNode(text.slice(previous, match.index)));
-        const span = document.createElement('span');
-        span.className = 'self-name';
-        span.textContent = match[0];
-        fragment.appendChild(span);
-        previous = match.index + match[0].length;
-      }
-      if (previous) {
-        fragment.appendChild(document.createTextNode(text.slice(previous)));
-        node.replaceWith(fragment);
-      }
-    });
-  });
-});
-</script>
-
-<footer class="site-footer">
-  © 2026 Hien Duy Nguyen · Last updated `r rmarkdown::metadata$date`
-</footer>
+<script src="Untitled_files/site.js"></script>
